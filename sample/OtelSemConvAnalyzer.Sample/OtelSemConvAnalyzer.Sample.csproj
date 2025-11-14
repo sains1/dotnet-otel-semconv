@@ -8,6 +8,7 @@
     <ItemGroup>
         <ProjectReference Include="..\..\src\OtelSemConvAnalyzer\OtelSemConvAnalyzer.csproj"
                           OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+        <ProjectReference Include="..\ServiceDefaults\ServiceDefaults.csproj" />
     </ItemGroup>
 
 </Project>

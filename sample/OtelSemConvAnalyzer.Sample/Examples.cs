@@ -1,5 +1,5 @@
-// ReSharper disable UnusedType.Global
-// ReSharper disable UnusedMember.Global
+using System.Diagnostics;
+using OpenTelemetry.SemanticConventions;
 
 namespace OtelSemConvAnalyzer.Sample;
 
@@ -7,14 +7,17 @@ namespace OtelSemConvAnalyzer.Sample;
 
 public class Examples
 {
-    public class MyCompanyClass // Try to apply quick fix using the IDE.
-    {
-    }
-
     public void ToStars()
     {
-        var spaceship = new Spaceship();
-        spaceship.SetSpeed(300000000); // Invalid value, it should be highlighted.
-        spaceship.SetSpeed(42);
+        using var activity = Otel.ActivitySource.StartActivity();
+        
+        // 1. set attribute on Activity.Current
+        Activity.Current?.SetTag("not_allowed", 1);
+        
+        // 2. set attribute on Activity from ActivitySource
+        activity?.SetTag("not_allowed", 1);
+        
+        // 3. use wrong type on a known attribute
+        activity?.SetTag(OtelAttributes.MYAPP_ACTIVITY_LOG_ENTRY_COUNT, "bad type");
     }
 }
