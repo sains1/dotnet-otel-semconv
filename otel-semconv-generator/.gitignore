@@ -1,0 +1,14 @@
+# Generated output
+output/
+resolved-registry.json
+
+# Custom YAML files copied to semantic-conventions/model (source is custom-registry/)
+semantic-conventions/model/activity_log.yaml
+semantic-conventions/model/cache.yaml
+semantic-conventions/model/general.yaml
+semantic-conventions/model/permissions.yaml
+semantic-conventions/model/upload.yaml
+semantic-conventions/model/workspace.yaml
+
+# Cloned semantic conventions repository (downloaded by setup)
+semantic-conventions/

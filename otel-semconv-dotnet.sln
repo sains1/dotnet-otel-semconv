@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtelSemConvAnalyzer", "src\OtelSemConvAnalyzer\OtelSemConvAnalyzer.csproj", "{D9294A40-C72E-4CCB-858F-74852AC44634}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtelSemConvAnalyzer.Sample", "sample\OtelSemConvAnalyzer.Sample\OtelSemConvAnalyzer.Sample.csproj", "{6C012C49-4AA9-4E19-AD98-D0989F4BE54F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtelSemConvAnalyzer.Tests", "tests\OtelSemConvAnalyzer.Tests\OtelSemConvAnalyzer.Tests.csproj", "{19592709-3645-45D2-B88A-7CB890D55F28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9294A40-C72E-4CCB-858F-74852AC44634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9294A40-C72E-4CCB-858F-74852AC44634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9294A40-C72E-4CCB-858F-74852AC44634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9294A40-C72E-4CCB-858F-74852AC44634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C012C49-4AA9-4E19-AD98-D0989F4BE54F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C012C49-4AA9-4E19-AD98-D0989F4BE54F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C012C49-4AA9-4E19-AD98-D0989F4BE54F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C012C49-4AA9-4E19-AD98-D0989F4BE54F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19592709-3645-45D2-B88A-7CB890D55F28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19592709-3645-45D2-B88A-7CB890D55F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19592709-3645-45D2-B88A-7CB890D55F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19592709-3645-45D2-B88A-7CB890D55F28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

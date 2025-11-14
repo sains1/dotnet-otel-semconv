@@ -1,0 +1,161 @@
+name: App PR
+
+on:
+  pull_request:
+    branches:
+      - "**"
+    paths:
+      - "src/**"
+      - ".github/workflows/app-ci.yml"
+
+jobs:
+  dotnet-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 9
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.0.x"
+
+      - name: Restore dotnet tools
+        run: dotnet tool restore
+
+      - name: Check code formatting
+        run: dotnet format legacylocker.sln --verify-no-changes
+
+      - name: Install Weaver for telemetry validation
+        run: |
+          curl --proto '=https' --tlsv1.2 -LsSf \
+            https://github.com/open-telemetry/weaver/releases/latest/download/weaver-installer.sh | sh
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: Checkout OpenTelemetry semantic conventions
+        uses: actions/checkout@v4
+        with:
+          repository: open-telemetry/semantic-conventions
+          path: otel-semconv-generator/semantic-conventions
+
+      - name: Prepare semantic conventions
+        working-directory: otel-semconv-generator
+        run: |
+          # Copy custom registry files alongside standard conventions
+          echo "Copying custom LegacyLocker conventions..."
+          cp custom-registry/*.yaml semantic-conventions/model/
+
+          echo "✓ Semantic conventions prepared (standard + custom)"
+
+      - name: Start Weaver telemetry validator
+        working-directory: otel-semconv-generator
+        run: |
+          # Start Weaver in background (with BOTH standard and custom registries)
+          weaver registry live-check \
+            --registry ./semantic-conventions/model \
+            --input-source otlp \
+            --otlp-grpc-port 4317 \
+            --admin-port 4320 \
+            --output validation-results \
+            --format json \
+            --inactivity-timeout 120 \
+            > weaver.log 2>&1 &
+
+          WEAVER_PID=$!
+          echo $WEAVER_PID > weaver.pid
+          echo "Weaver started with PID: $WEAVER_PID"
+
+          # Wait for Weaver to start
+          echo "Waiting for Weaver to be ready..."
+          for i in {1..30}; do
+            if nc -z localhost 4317 2>/dev/null; then
+              echo "✓ Weaver is ready on port 4317"
+              break
+            fi
+            if [ $i -eq 30 ]; then
+              echo "❌ Weaver failed to start"
+              cat weaver.log
+              exit 1
+            fi
+            echo "  Attempt $i/30..."
+            sleep 1
+          done
+
+      - name: Run tests with telemetry export
+        run: |
+          echo "Running tests with OTLP export enabled..."
+          echo "OTEL_EXPORTER_OTLP_ENDPOINT=$OTEL_EXPORTER_OTLP_ENDPOINT"
+          echo "Verifying Weaver is listening on port 4317..."
+          nc -zv localhost 4317 || echo "WARNING: Weaver not listening!"
+          echo ""
+          echo "Starting tests..."
+          dotnet test tests/Web.Tests
+          echo ""
+          echo "Tests completed. Waiting for OTLP flush..."
+          sleep 3
+        env:
+          OTEL_EXPORTER_OTLP_ENDPOINT: "http://localhost:4317"
+
+      - name: Stop Weaver
+        if: always()
+        working-directory: otel-semconv-generator
+        run: |
+          echo "Stopping Weaver..."
+
+          # Check if Weaver is still running
+          if [ -f weaver.pid ]; then
+            PID=$(cat weaver.pid)
+            if kill -0 $PID 2>/dev/null; then
+              echo "✓ Weaver is still running (PID: $PID)"
+            else
+              echo "⚠️  Weaver process died (PID: $PID)"
+            fi
+          fi
+
+          # Show Weaver log before stopping
+          echo ""
+          echo "=== Weaver Log Preview ==="
+          if [ -f weaver.log ]; then
+            tail -20 weaver.log
+          else
+            echo "No weaver.log found"
+          fi
+          echo ""
+
+          # Try graceful shutdown
+          curl -X POST http://localhost:4320/stop 2>/dev/null || true
+          sleep 2
+
+          # Force kill if still running
+          if [ -f weaver.pid ]; then
+            PID=$(cat weaver.pid)
+            if kill -0 $PID 2>/dev/null; then
+              kill $PID 2>/dev/null || true
+            fi
+          fi
+
+          echo "✓ Weaver stopped"
+
+      - name: Check telemetry validation results
+        if: always()
+        working-directory: otel-semconv-generator
+        run: |
+          if [ -f validation-results/live_check.json ]; then
+            echo "Checking telemetry validation results..."
+            bash scripts/check-validation.sh validation-results/live_check.json
+          else
+            echo "⚠️  No validation results found"
+            echo "Expected: validation-results/live_check.json"
+            ls -la validation-results/ 2>/dev/null || echo "validation-results directory not found"
+            exit 1
+          fi
+
+      - name: Upload validation artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: telemetry-validation
+          path: |
+            otel-semconv-generator/validation-results/
+            otel-semconv-generator/weaver.log
+          retention-days: 7

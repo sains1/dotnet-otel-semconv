@@ -1,0 +1,46 @@
+# Whitespace control for cleaner templates
+whitespace_control:
+  trim_blocks: true
+  lstrip_blocks: true
+
+# Comment formatting for C# XML doc comments
+comment_formats:
+  csharp:
+    format: markdown
+    prefix: "/// "
+    trim: true
+    remove_trailing_dots: false
+
+# Type mappings from semantic convention types to C# types
+text_maps:
+  csharp_types:
+    int: "int"
+    double: "double"
+    boolean: "bool"
+    string: "string"
+    "int[]": "int[]"
+    "double[]": "double[]"
+    "boolean[]": "bool[]"
+    "string[]": "string[]"
+
+# Parameters accessible in templates
+params:
+  # Namespace for generated code
+  namespace: "OpenTelemetry.SemanticConventions"
+
+  # Exclude .NET-specific namespaces (already handled by built-in instrumentation)
+  excluded_namespaces:
+    - "aspnetcore"
+    - "dotnet"
+    - "kestrel"
+    - "signalr"
+
+  # Target semantic conventions version
+  schema_url: "https://opentelemetry.io/schemas/1.38.0"
+
+# Template definitions
+templates:
+  # Attributes template
+  - pattern: attributes.cs.j2
+    filter: semconv_grouped_attributes
+    application_mode: single

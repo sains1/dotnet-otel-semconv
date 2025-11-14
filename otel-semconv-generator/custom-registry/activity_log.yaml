@@ -1,0 +1,22 @@
+groups:
+  - id: registry.myapp.activity_log
+    type: attribute_group
+    brief: MyApp activity log and audit trail attributes
+    attributes:
+      - id: myapp.activity_log.id
+        type: string
+        brief: The unique identifier of an activity log
+        examples: ["log-550e8400-e29b-41d4-a716"]
+        stability: stable
+
+      - id: myapp.activity_log.experimental_id
+        type: string
+        brief: Another identifier that is experimental for demonstration
+        examples: ["log-550e8400-e29b-41d4-a716"]
+        stability: experimental 
+
+      - id: myapp.activity_log.entry.count
+        type: int
+        brief: The number of entries in an activity log
+        examples: [10, 100, 1000]
+        stability: stable
