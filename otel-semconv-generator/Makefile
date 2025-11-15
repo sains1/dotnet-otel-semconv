@@ -29,12 +29,12 @@ generate: clean
 	@echo "Generating OpenTelemetry semantic conventions..."
 	@echo ""
 
-	@echo "Step 1/4: Copying custom registry to semantic-conventions/model/..."
+	@echo "Step 1/2: Copying custom registry to semantic-conventions/model/..."
 	@cp custom-registry/*.yaml semantic-conventions/model/
 	@echo "✓ Custom registry files copied"
 	@echo ""
 
-	@echo "Step 2/4: Generating C# code from semantic conventions..."
+	@echo "Step 2/2: Generating C# code from semantic conventions..."
 	@echo "(Using registry: ./semantic-conventions/model)"
 	@weaver registry generate \
 		--registry ./semantic-conventions/model \
@@ -44,13 +44,17 @@ generate: clean
 	@echo "✓ Code generated"
 	@echo ""
 
-	@echo "Step 3/4: Copying generated file to sample/OtelSemConvAnalyzer.Sample/..."
+copy:
+	@echo "Step 1/2: Copying generated files..."
 	@mkdir -p ../sample/OtelSemConvAnalyzer.Sample
+	@mkdir -p ../src/OtelSemConvAnalyzer
 	@cp output/OtelAttributes.cs ../sample/OtelSemConvAnalyzer.Sample/OtelAttributes.cs
-	@echo "✓ File copied to ../sample/OtelSemConvAnalyzer.Sample/OtelAttributes.cs"
+	@cp output/otel-attributes-metadata.json ../sample/OtelSemConvAnalyzer.Sample/otel-attributes-metadata.json
+	@echo "✓ OtelAttributes.cs copied to ../sample/OtelSemConvAnalyzer.Sample/"
+	@echo "✓ otel-attributes-metadata.json copied to ../sample/OtelSemConvAnalyzer.Sample/"
 	@echo ""
 
-	@echo "Step 4/4: Verifying generated file..."
+	@echo "Step 2/2: Verifying generated file..."
 	@wc -l ../sample/OtelSemConvAnalyzer.Sample/OtelAttributes.cs
 	@grep -c "MYAPP_" ../sample/OtelSemConvAnalyzer.Sample/OtelAttributes.cs || true
 	@echo ""

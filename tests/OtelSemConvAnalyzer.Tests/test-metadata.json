@@ -1,0 +1,69 @@
+{
+  "version": "test",
+  "attributes": [
+    {
+      "attributeName": "myapp.activity_log.id",
+      "constantName": "MYAPP_ACTIVITY_LOG_ID",
+      "type": "string",
+      "stability": "stable",
+      "brief": "Test attribute",
+      "deprecated": null
+    },
+    {
+      "attributeName": "myapp.activity_log.entry.count",
+      "constantName": "MYAPP_ACTIVITY_LOG_ENTRY_COUNT",
+      "type": "int",
+      "stability": "stable",
+      "brief": "Test attribute",
+      "deprecated": null
+    },
+    {
+      "attributeName": "myapp.activity_log.experimental_id",
+      "constantName": "MYAPP_ACTIVITY_LOG_EXPERIMENTAL_ID",
+      "type": "string",
+      "stability": "development",
+      "brief": "Test attribute",
+      "deprecated": null
+    },
+    {
+      "attributeName": "android.state",
+      "constantName": "ANDROID_STATE",
+      "type": "string",
+      "stability": "development",
+      "brief": "Test attribute",
+      "deprecated": "Replaced by android.app.state"
+    },
+    {
+      "attributeName": "app.jank.period",
+      "constantName": "APP_JANK_PERIOD",
+      "type": "double",
+      "stability": "development",
+      "brief": "Test attribute",
+      "deprecated": null
+    },
+    {
+      "attributeName": "aspnetcore.request.is_unhandled",
+      "constantName": "ASPNETCORE_REQUEST_IS_UNHANDLED",
+      "type": "boolean",
+      "stability": "stable",
+      "brief": "Test attribute",
+      "deprecated": null
+    },
+    {
+      "attributeName": "client.address",
+      "constantName": "CLIENT_ADDRESS",
+      "type": "string",
+      "stability": "stable",
+      "brief": "Test attribute",
+      "deprecated": null
+    },
+    {
+      "attributeName": "client.port",
+      "constantName": "CLIENT_PORT",
+      "type": "int",
+      "stability": "stable",
+      "brief": "Test attribute",
+      "deprecated": null
+    }
+  ]
+}

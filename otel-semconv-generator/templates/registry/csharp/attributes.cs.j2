@@ -6,6 +6,7 @@
 // </auto-generated>
 
 #nullable enable
+using System;
 
 namespace {{ params.namespace }};
 
@@ -24,32 +25,30 @@ public static class OtelAttributes
 
     /// <summary>
     /// {{ attribute.brief }}
-            {%- if attribute.note %}
-
     /// </summary>
+            {%- if attribute.note or attribute.examples %}
+
     /// <remarks>
+                {%- if attribute.note %}
+
     /// {{ attribute.note | replace("\n", " ") | replace("<", "[") | replace(">", "]") }}
-            {%- endif %}
-            {%- if attribute.examples is iterable and attribute.examples is not string %}
+                {%- endif %}
+                {%- if attribute.examples is iterable and attribute.examples is not string %}
 
     /// <para>Examples:</para>
     /// <list type="bullet">
-                {%- for example in attribute.examples %}
+                    {%- for example in attribute.examples %}
 
     /// <item><description>{{ example | replace("\n", " ") | replace("  ", " ") }}</description></item>
-                {%- endfor %}
+                    {%- endfor %}
 
     /// </list>
-            {%- elif attribute.examples %}
+                {%- elif attribute.examples %}
 
     /// <para>Example: {{ attribute.examples | replace("\n", " ") }}</para>
-            {%- endif %}
-            {%- if attribute.note or attribute.examples %}
+                {%- endif %}
 
     /// </remarks>
-            {%- else %}
-
-    /// </summary>
             {%- endif %}
             {%- if attribute.deprecated %}
 

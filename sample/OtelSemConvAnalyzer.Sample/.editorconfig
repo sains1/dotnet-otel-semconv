@@ -1,0 +1,21 @@
+# EditorConfig for OpenTelemetry Semantic Convention Analyzer
+
+root = true
+
+[*.cs]
+# OpenTelemetry Semantic Convention Analyzer Rules
+
+# OTEL0001: Invalid attribute name
+# Severity: error (default), warning, suggestion, silent, none
+dotnet_diagnostic.OTEL0001.severity = warning
+
+# OTEL0002: Type mismatch
+# Severity: error (default), warning, suggestion, silent, none
+dotnet_diagnostic.OTEL0002.severity = warning
+# OTEL0003: Experimental attribute usage
+# Severity: suggestion (default), error, warning, silent, none
+dotnet_diagnostic.OTEL0003.severity = warning
+
+# OTEL0004: Deprecated attribute usage
+# Severity: warning (default), error, suggestion, silent, none
+dotnet_diagnostic.OTEL0004.severity = warning

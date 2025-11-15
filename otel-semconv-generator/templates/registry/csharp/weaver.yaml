@@ -44,3 +44,8 @@ templates:
   - pattern: attributes.cs.j2
     filter: semconv_grouped_attributes
     application_mode: single
+
+  # Analyzer metadata template (JSON - for runtime loading)
+  - pattern: analyzer-metadata.json.j2
+    filter: semconv_grouped_attributes
+    application_mode: single

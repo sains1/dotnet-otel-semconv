@@ -4,6 +4,7 @@
 // </auto-generated>
 
 #nullable enable
+using System;
 
 namespace OpenTelemetry.SemanticConventions;
 
@@ -29,6 +30,8 @@ public static class OtelAttributes
     /// <summary>
     /// Uniquely identifies the framework API revision offered by a version (`os.version`) of the android operating system. More information can be found in the [Android API levels documentation](https://developer.android.com/guide/topics/manifest/uses-sdk-element#ApiLevels).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>33</description></item>
@@ -38,9 +41,6 @@ public static class OtelAttributes
     public const string ANDROID_OS_API_LEVEL = "android.os.api_level";
     /// <summary>
     /// Deprecated. Use `android.app.state` attribute instead.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `android.app.state`.\", \"reason\": \"renamed\", \"renamed_to\": \"android.app.state\"}")]
     public const string ANDROID_STATE = "android.state";
@@ -48,6 +48,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// Unique identifier for a particular build or compilation of the application.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>6cff0a7e-cefc-4668-96f5-1273d8b334d0</description></item>
@@ -82,6 +84,8 @@ public static class OtelAttributes
     public const string APP_JANK_FRAME_COUNT = "app.jank.frame_count";
     /// <summary>
     /// The time period, in seconds, for which this jank is being reported.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1.0</description></item>
@@ -92,6 +96,8 @@ public static class OtelAttributes
     public const string APP_JANK_PERIOD = "app.jank.period";
     /// <summary>
     /// The minimum rendering threshold for this jank, in seconds.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0.016</description></item>
@@ -102,6 +108,8 @@ public static class OtelAttributes
     public const string APP_JANK_THRESHOLD = "app.jank.threshold";
     /// <summary>
     /// The x (horizontal) coordinate of a screen coordinate, in screen pixels.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0</description></item>
@@ -112,6 +120,8 @@ public static class OtelAttributes
     /// <summary>
     /// The y (vertical) component of a screen coordinate, in screen pixels.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>12</description></item>
@@ -180,6 +190,8 @@ public static class OtelAttributes
     /// <summary>
     /// The provenance filename of the built attestation which directly relates to the build artifact filename. This filename SHOULD accompany the artifact at publish time. See the [SLSA Relationship](https://slsa.dev/spec/v1.0/distributing-provenance#relationship-between-artifacts-and-attestations) specification for more information.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>golang-binary-amd64-v0.1.0.attestation</description></item>
@@ -192,6 +204,8 @@ public static class OtelAttributes
     /// <summary>
     /// The full [hash value (see glossary)](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-5.pdf), of the built attestation. Some envelopes in the [software attestation space](https://github.com/in-toto/attestation/tree/main/spec) also refer to this as the **digest**.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1b31dfcd5b7f9267bf2ff47651df1cfb9147b9e4df1f335accf65b4cda498408</description></item>
@@ -201,6 +215,8 @@ public static class OtelAttributes
     /// <summary>
     /// The id of the build [software attestation](https://slsa.dev/attestation-model).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>123</description></item>
@@ -237,6 +253,8 @@ public static class OtelAttributes
     /// <summary>
     /// The [Package URL](https://github.com/package-url/purl-spec) of the [package artifact](https://slsa.dev/spec/v1.0/terminology#package-model) provides a standard way to identify and locate the packaged artifact.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>pkg:github/package-url/purl-spec@1209109710924</description></item>
@@ -247,6 +265,8 @@ public static class OtelAttributes
     /// <summary>
     /// The version of the artifact.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>v0.1.0</description></item>
@@ -259,6 +279,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// The result of the authentication operation.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>success</description></item>
@@ -268,6 +290,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_AUTHENTICATION_RESULT = "aspnetcore.authentication.result";
     /// <summary>
     /// The identifier that names a particular authentication handler.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Cookies</description></item>
@@ -278,6 +302,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_AUTHENTICATION_SCHEME = "aspnetcore.authentication.scheme";
     /// <summary>
     /// The name of the authorization policy.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>RequireAdminRole</description></item>
@@ -286,6 +312,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_AUTHORIZATION_POLICY = "aspnetcore.authorization.policy";
     /// <summary>
     /// The result of calling the authorization service.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>success</description></item>
@@ -295,6 +323,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_AUTHORIZATION_RESULT = "aspnetcore.authorization.result";
     /// <summary>
     /// ASP.NET Core exception middleware handling result.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>handled</description></item>
@@ -304,6 +334,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_DIAGNOSTICS_EXCEPTION_RESULT = "aspnetcore.diagnostics.exception.result";
     /// <summary>
     /// Full type name of the [`IExceptionHandler`](https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.diagnostics.iexceptionhandler) implementation that handled the exception.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Contoso.MyHandler</description></item>
@@ -312,6 +344,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_DIAGNOSTICS_HANDLER_TYPE = "aspnetcore.diagnostics.handler.type";
     /// <summary>
     /// The error code for a failed identity operation.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>DefaultError</description></item>
@@ -321,6 +355,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_IDENTITY_ERROR_CODE = "aspnetcore.identity.error_code";
     /// <summary>
     /// The result from checking the password.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>success</description></item>
@@ -330,6 +366,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_IDENTITY_PASSWORD_CHECK_RESULT = "aspnetcore.identity.password_check_result";
     /// <summary>
     /// The result of the identity operation.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>success</description></item>
@@ -339,6 +377,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_IDENTITY_RESULT = "aspnetcore.identity.result";
     /// <summary>
     /// Whether the sign in result was success or failure.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>password</description></item>
@@ -348,6 +388,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_IDENTITY_SIGN_IN_RESULT = "aspnetcore.identity.sign_in.result";
     /// <summary>
     /// The authentication type.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>password</description></item>
@@ -357,6 +399,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_IDENTITY_SIGN_IN_TYPE = "aspnetcore.identity.sign_in.type";
     /// <summary>
     /// What the token will be used for.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>success</description></item>
@@ -366,6 +410,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_IDENTITY_TOKEN_PURPOSE = "aspnetcore.identity.token_purpose";
     /// <summary>
     /// The result of token verification.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>success</description></item>
@@ -375,6 +421,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_IDENTITY_TOKEN_VERIFIED = "aspnetcore.identity.token_verified";
     /// <summary>
     /// The user update type.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>update</description></item>
@@ -385,6 +433,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_IDENTITY_USER_UPDATE_TYPE = "aspnetcore.identity.user.update_type";
     /// <summary>
     /// The full name of the identity user type.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Contoso.ContosoUser</description></item>
@@ -393,6 +443,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_IDENTITY_USER_TYPE = "aspnetcore.identity.user_type";
     /// <summary>
     /// The name of the library or subsystem using the memory pool instance.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>kestrel</description></item>
@@ -402,6 +454,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_MEMORY_POOL_OWNER = "aspnetcore.memory_pool.owner";
     /// <summary>
     /// Rate limiting policy name.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>fixed</description></item>
@@ -412,6 +466,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_RATE_LIMITING_POLICY = "aspnetcore.rate_limiting.policy";
     /// <summary>
     /// Rate-limiting result, shows whether the lease was acquired or contains a rejection reason
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>acquired</description></item>
@@ -421,6 +477,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_RATE_LIMITING_RESULT = "aspnetcore.rate_limiting.result";
     /// <summary>
     /// Flag indicating if request was handled by the application pipeline.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>true</description></item>
@@ -429,6 +487,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_REQUEST_IS_UNHANDLED = "aspnetcore.request.is_unhandled";
     /// <summary>
     /// A value that indicates whether the matched route is a fallback route.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>true</description></item>
@@ -437,6 +497,8 @@ public static class OtelAttributes
     public const string ASPNETCORE_ROUTING_IS_FALLBACK = "aspnetcore.routing.is_fallback";
     /// <summary>
     /// Match result - success or failure
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>success</description></item>
@@ -446,13 +508,12 @@ public static class OtelAttributes
     public const string ASPNETCORE_ROUTING_MATCH_STATUS = "aspnetcore.routing.match_status";
     /// <summary>
     /// A flag indicating whether the sign in is persistent.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string ASPNETCORE_SIGN_IN_IS_PERSISTENT = "aspnetcore.sign_in.is_persistent";
     /// <summary>
     /// A value that indicates whether the user is authenticated.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>true</description></item>
@@ -464,6 +525,8 @@ public static class OtelAttributes
     /// <summary>
     /// The unique identifier of the AWS Bedrock Guardrail. A [guardrail](https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html) helps safeguard and prevent unwanted behavior from model responses or user messages.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>sgi5gkybzqak</description></item>
@@ -473,6 +536,8 @@ public static class OtelAttributes
     /// <summary>
     /// The unique identifier of the AWS Bedrock Knowledge base. A [knowledge base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) is a bank of information that can be queried by models to generate more relevant responses and augment prompts.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>XFWUPB9PAW</description></item>
@@ -481,6 +546,8 @@ public static class OtelAttributes
     public const string AWS_BEDROCK_KNOWLEDGE_BASE_ID = "aws.bedrock.knowledge_base.id";
     /// <summary>
     /// The JSON-serialized value of each item in the `AttributeDefinitions` request field.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["{ \"AttributeName\": \"string\", \"AttributeType\": \"string\" }"]</description></item>
@@ -489,6 +556,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_ATTRIBUTE_DEFINITIONS = "aws.dynamodb.attribute_definitions";
     /// <summary>
     /// The value of the `AttributesToGet` request parameter.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["lives", "id"]</description></item>
@@ -497,13 +566,12 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_ATTRIBUTES_TO_GET = "aws.dynamodb.attributes_to_get";
     /// <summary>
     /// The value of the `ConsistentRead` request parameter.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string AWS_DYNAMODB_CONSISTENT_READ = "aws.dynamodb.consistent_read";
     /// <summary>
     /// The JSON-serialized value of each item in the `ConsumedCapacity` response field.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["{ \"CapacityUnits\": number, \"GlobalSecondaryIndexes\": { \"string\" : { \"CapacityUnits\": number, \"ReadCapacityUnits\": number, \"WriteCapacityUnits\": number } }, \"LocalSecondaryIndexes\": { \"string\" : { \"CapacityUnits\": number, \"ReadCapacityUnits\": number, \"WriteCapacityUnits\": number } }, \"ReadCapacityUnits\": number, \"Table\": { \"CapacityUnits\": number, \"ReadCapacityUnits\": number, \"WriteCapacityUnits\": number }, \"TableName\": \"string\", \"WriteCapacityUnits\": number }"]</description></item>
@@ -512,6 +580,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_CONSUMED_CAPACITY = "aws.dynamodb.consumed_capacity";
     /// <summary>
     /// The value of the `Count` response parameter.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>10</description></item>
@@ -520,6 +590,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_COUNT = "aws.dynamodb.count";
     /// <summary>
     /// The value of the `ExclusiveStartTableName` request parameter.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Users</description></item>
@@ -529,6 +601,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_EXCLUSIVE_START_TABLE = "aws.dynamodb.exclusive_start_table";
     /// <summary>
     /// The JSON-serialized value of each item in the `GlobalSecondaryIndexUpdates` request field.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["{ \"Create\": { \"IndexName\": \"string\", \"KeySchema\": [ { \"AttributeName\": \"string\", \"KeyType\": \"string\" } ], \"Projection\": { \"NonKeyAttributes\": [ \"string\" ], \"ProjectionType\": \"string\" }, \"ProvisionedThroughput\": { \"ReadCapacityUnits\": number, \"WriteCapacityUnits\": number } }"]</description></item>
@@ -537,6 +611,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_GLOBAL_SECONDARY_INDEX_UPDATES = "aws.dynamodb.global_secondary_index_updates";
     /// <summary>
     /// The JSON-serialized value of each item of the `GlobalSecondaryIndexes` request field
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["{ \"IndexName\": \"string\", \"KeySchema\": [ { \"AttributeName\": \"string\", \"KeyType\": \"string\" } ], \"Projection\": { \"NonKeyAttributes\": [ \"string\" ], \"ProjectionType\": \"string\" }, \"ProvisionedThroughput\": { \"ReadCapacityUnits\": number, \"WriteCapacityUnits\": number } }"]</description></item>
@@ -545,6 +621,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_GLOBAL_SECONDARY_INDEXES = "aws.dynamodb.global_secondary_indexes";
     /// <summary>
     /// The value of the `IndexName` request parameter.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>name_to_group</description></item>
@@ -553,6 +631,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_INDEX_NAME = "aws.dynamodb.index_name";
     /// <summary>
     /// The JSON-serialized value of the `ItemCollectionMetrics` response field.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>{ "string" : [ { "ItemCollectionKey": { "string" : { "B": blob, "BOOL": boolean, "BS": [ blob ], "L": [ "AttributeValue" ], "M": { "string" : "AttributeValue" }, "N": "string", "NS": [ "string" ], "NULL": boolean, "S": "string", "SS": [ "string" ] } }, "SizeEstimateRangeGB": [ number ] } ] }</description></item>
@@ -561,6 +641,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_ITEM_COLLECTION_METRICS = "aws.dynamodb.item_collection_metrics";
     /// <summary>
     /// The value of the `Limit` request parameter.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>10</description></item>
@@ -569,6 +651,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_LIMIT = "aws.dynamodb.limit";
     /// <summary>
     /// The JSON-serialized value of each item of the `LocalSecondaryIndexes` request field.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["{ \"IndexArn\": \"string\", \"IndexName\": \"string\", \"IndexSizeBytes\": number, \"ItemCount\": number, \"KeySchema\": [ { \"AttributeName\": \"string\", \"KeyType\": \"string\" } ], \"Projection\": { \"NonKeyAttributes\": [ \"string\" ], \"ProjectionType\": \"string\" } }"]</description></item>
@@ -577,6 +661,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_LOCAL_SECONDARY_INDEXES = "aws.dynamodb.local_secondary_indexes";
     /// <summary>
     /// The value of the `ProjectionExpression` request parameter.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Title</description></item>
@@ -587,6 +673,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_PROJECTION = "aws.dynamodb.projection";
     /// <summary>
     /// The value of the `ProvisionedThroughput.ReadCapacityUnits` request parameter.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1.0</description></item>
@@ -596,6 +684,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_PROVISIONED_READ_CAPACITY = "aws.dynamodb.provisioned_read_capacity";
     /// <summary>
     /// The value of the `ProvisionedThroughput.WriteCapacityUnits` request parameter.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1.0</description></item>
@@ -605,13 +695,12 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_PROVISIONED_WRITE_CAPACITY = "aws.dynamodb.provisioned_write_capacity";
     /// <summary>
     /// The value of the `ScanIndexForward` request parameter.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string AWS_DYNAMODB_SCAN_FORWARD = "aws.dynamodb.scan_forward";
     /// <summary>
     /// The value of the `ScannedCount` response parameter.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>50</description></item>
@@ -620,6 +709,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_SCANNED_COUNT = "aws.dynamodb.scanned_count";
     /// <summary>
     /// The value of the `Segment` request parameter.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>10</description></item>
@@ -628,6 +719,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_SEGMENT = "aws.dynamodb.segment";
     /// <summary>
     /// The value of the `Select` request parameter.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>ALL_ATTRIBUTES</description></item>
@@ -637,6 +730,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_SELECT = "aws.dynamodb.select";
     /// <summary>
     /// The number of items in the `TableNames` response parameter.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>20</description></item>
@@ -645,6 +740,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_TABLE_COUNT = "aws.dynamodb.table_count";
     /// <summary>
     /// The keys in the `RequestItems` object field.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["Users", "Cats"]</description></item>
@@ -653,6 +750,8 @@ public static class OtelAttributes
     public const string AWS_DYNAMODB_TABLE_NAMES = "aws.dynamodb.table_names";
     /// <summary>
     /// The value of the `TotalSegments` request parameter.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>100</description></item>
@@ -662,6 +761,8 @@ public static class OtelAttributes
     /// <summary>
     /// The ARN of an [ECS cluster](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>arn:aws:ecs:us-west-2:123456789123:cluster/my-cluster</description></item>
@@ -671,6 +772,8 @@ public static class OtelAttributes
     /// <summary>
     /// The Amazon Resource Name (ARN) of an [ECS container instance](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_instances.html).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>arn:aws:ecs:us-west-1:123456789123:container/32624152-9086-4f0e-acae-1a75b14fe4d9</description></item>
@@ -680,14 +783,13 @@ public static class OtelAttributes
     /// <summary>
     /// The [launch type](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html) for an ECS task.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string AWS_ECS_LAUNCHTYPE = "aws.ecs.launchtype";
     /// <summary>
     /// The ARN of a running [ECS task](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html#ecs-resource-ids).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>arn:aws:ecs:us-west-1:123456789123:task/10838bed-421f-43ef-870a-f43feacbbb5b</description></item>
@@ -698,6 +800,8 @@ public static class OtelAttributes
     /// <summary>
     /// The family name of the [ECS task definition](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html) used to create the ECS task.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry-family</description></item>
@@ -707,6 +811,8 @@ public static class OtelAttributes
     /// <summary>
     /// The ID of a running ECS task. The ID MUST be extracted from `task.arn`.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>10838bed-421f-43ef-870a-f43feacbbb5b</description></item>
@@ -717,6 +823,8 @@ public static class OtelAttributes
     /// <summary>
     /// The revision for the task definition used to create the ECS task.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>8</description></item>
@@ -727,6 +835,8 @@ public static class OtelAttributes
     /// <summary>
     /// The ARN of an EKS cluster.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>arn:aws:ecs:us-west-2:123456789123:cluster/my-cluster</description></item>
@@ -735,6 +845,8 @@ public static class OtelAttributes
     public const string AWS_EKS_CLUSTER_ARN = "aws.eks.cluster.arn";
     /// <summary>
     /// The AWS extended request ID as returned in the response header `x-amz-id-2`.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>wzHcyEWfmOGDIE5QOhTAqFDoDWP3y8IUvpNINCwL9N4TEHbUw0/gZJ+VZTmCNCWR7fezEN3eCiQ=</description></item>
@@ -744,6 +856,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the AWS Kinesis [stream](https://docs.aws.amazon.com/streams/latest/dev/introduction.html) the request refers to. Corresponds to the `--stream-name` parameter of the Kinesis [describe-stream](https://docs.aws.amazon.com/cli/latest/reference/kinesis/describe-stream.html) operation.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>some-stream-name</description></item>
@@ -765,6 +879,8 @@ public static class OtelAttributes
     /// <summary>
     /// The UUID of the [AWS Lambda EvenSource Mapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html). An event source is mapped to a lambda function. It's contents are read by Lambda and used to trigger a function. This isn't available in the lambda execution context or the lambda runtime environtment. This is going to be populated by the AWS SDK for each language when that UUID is present. Some of these operations are Create/Delete/Get/List/Update EventSourceMapping.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>587ad24b-03b9-4413-8202-bbd56b36e5b7</description></item>
@@ -810,6 +926,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name(s) of the AWS log stream(s) an application is writing to.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["logs/main/10838bed-421f-43ef-870a-f43feacbbb5b"]</description></item>
@@ -818,6 +936,8 @@ public static class OtelAttributes
     public const string AWS_LOG_STREAM_NAMES = "aws.log.stream.names";
     /// <summary>
     /// The AWS request ID as returned in the response headers `x-amzn-requestid`, `x-amzn-request-id` or `x-amz-request-id`.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>79b9da39-b7ae-508a-a6bc-864b2829c622</description></item>
@@ -894,6 +1014,8 @@ public static class OtelAttributes
     /// <summary>
     /// The ARN of the Secret stored in the Secrets Mangger
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>arn:aws:secretsmanager:us-east-1:123456789012:secret:SecretName-6RandomCharacters</description></item>
@@ -903,6 +1025,8 @@ public static class OtelAttributes
     /// <summary>
     /// The ARN of the AWS SNS Topic. An Amazon SNS [topic](https://docs.aws.amazon.com/sns/latest/dg/sns-create-topic.html) is a logical access point that acts as a communication channel.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>arn:aws:sns:us-east-1:123456789012:mystack-mytopic-NZJ5JSMVGFIE</description></item>
@@ -912,6 +1036,8 @@ public static class OtelAttributes
     /// <summary>
     /// The URL of the AWS SQS Queue. It's a unique identifier for a queue in Amazon Simple Queue Service (SQS) and is used to access the queue and perform actions on it.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>https://sqs.us-east-1.amazonaws.com/123456789012/MyQueue</description></item>
@@ -921,6 +1047,8 @@ public static class OtelAttributes
     /// <summary>
     /// The ARN of the AWS Step Functions Activity.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>arn:aws:states:us-east-1:123456789012:activity:get-greeting</description></item>
@@ -930,6 +1058,8 @@ public static class OtelAttributes
     /// <summary>
     /// The ARN of the AWS Step Functions State Machine.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>arn:aws:states:us-east-1:123456789012:stateMachine:myStateMachine:1</description></item>
@@ -941,6 +1071,8 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `azure.resource_provider.namespace` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Microsoft.Storage</description></item>
@@ -952,6 +1084,8 @@ public static class OtelAttributes
     public const string AZ_NAMESPACE = "az.namespace";
     /// <summary>
     /// Deprecated, use `azure.service.request.id` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>00000000-0000-0000-0000-000000000000</description></item>
@@ -963,6 +1097,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// The unique identifier of the client instance.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>3ba4827d-4422-483f-b59f-85b74211c11d</description></item>
@@ -972,13 +1108,12 @@ public static class OtelAttributes
     public const string AZURE_CLIENT_ID = "azure.client.id";
     /// <summary>
     /// Cosmos client connection mode.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string AZURE_COSMOSDB_CONNECTION_MODE = "azure.cosmosdb.connection.mode";
     /// <summary>
     /// Account or request [consistency level](https://learn.microsoft.com/azure/cosmos-db/consistency-levels).
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Eventual</description></item>
@@ -1004,6 +1139,8 @@ public static class OtelAttributes
     /// <summary>
     /// The number of request units consumed by the operation.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>46.18</description></item>
@@ -1013,13 +1150,12 @@ public static class OtelAttributes
     public const string AZURE_COSMOSDB_OPERATION_REQUEST_CHARGE = "azure.cosmosdb.operation.request_charge";
     /// <summary>
     /// Request payload size in bytes.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string AZURE_COSMOSDB_REQUEST_BODY_SIZE = "azure.cosmosdb.request.body.size";
     /// <summary>
     /// Cosmos DB sub status code.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1000</description></item>
@@ -1030,6 +1166,8 @@ public static class OtelAttributes
     /// <summary>
     /// [Azure Resource Provider Namespace](https://learn.microsoft.com/azure/azure-resource-manager/management/azure-services-resource-providers) as recognized by the client.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Microsoft.Storage</description></item>
@@ -1040,6 +1178,8 @@ public static class OtelAttributes
     public const string AZURE_RESOURCE_PROVIDER_NAMESPACE = "azure.resource_provider.namespace";
     /// <summary>
     /// The unique identifier of the service request. It's generated by the Azure service and returned with the response.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>00000000-0000-0000-0000-000000000000</description></item>
@@ -1101,26 +1241,29 @@ public static class OtelAttributes
     /// <summary>
     /// The consistency level of the query. Based on consistency values from [CQL](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html).
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string CASSANDRA_CONSISTENCY_LEVEL = "cassandra.consistency.level";
     /// <summary>
     /// The data center of the coordinating node for a query.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: us-west-2</para>
     /// </remarks>
     public const string CASSANDRA_COORDINATOR_DC = "cassandra.coordinator.dc";
     /// <summary>
     /// The ID of the coordinating node for a query.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: be13faa2-8574-4d71-926d-27f16cf8a7af</para>
     /// </remarks>
     public const string CASSANDRA_COORDINATOR_ID = "cassandra.coordinator.id";
     /// <summary>
     /// The fetch size used for paging, i.e. how many rows will be returned at once.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>5000</description></item>
@@ -1130,14 +1273,13 @@ public static class OtelAttributes
     /// <summary>
     /// Whether or not the query is idempotent.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string CASSANDRA_QUERY_IDEMPOTENT = "cassandra.query.idempotent";
     /// <summary>
     /// The number of times a query was speculatively executed. Not set or `0` if the query was not executed speculatively.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0</description></item>
@@ -1150,6 +1292,8 @@ public static class OtelAttributes
     /// <summary>
     /// The kind of action a pipeline run is performing.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>BUILD</description></item>
@@ -1161,6 +1305,8 @@ public static class OtelAttributes
     /// <summary>
     /// The human readable name of the pipeline within a CI/CD system.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Build and Test</description></item>
@@ -1173,6 +1319,8 @@ public static class OtelAttributes
     /// <summary>
     /// The result of a pipeline run.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>success</description></item>
@@ -1185,6 +1333,8 @@ public static class OtelAttributes
     /// <summary>
     /// The unique identifier of a pipeline run within a CI/CD system.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>120912</description></item>
@@ -1194,6 +1344,8 @@ public static class OtelAttributes
     /// <summary>
     /// The pipeline run goes through these states during its lifecycle.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>pending</description></item>
@@ -1205,6 +1357,8 @@ public static class OtelAttributes
     /// <summary>
     /// The [URL](https://wikipedia.org/wiki/URL) of the pipeline run, providing the complete address in order to locate and identify the pipeline run.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763?pr=1075</description></item>
@@ -1214,6 +1368,8 @@ public static class OtelAttributes
     /// <summary>
     /// The human readable name of a task within a pipeline. Task here most closely aligns with a [computing process](https://wikipedia.org/wiki/Pipeline_(computing)) in a pipeline. Other terms for tasks include commands, steps, and procedures.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Run GoLang Linter</description></item>
@@ -1226,6 +1382,8 @@ public static class OtelAttributes
     /// <summary>
     /// The unique identifier of a task run within a pipeline.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>12097</description></item>
@@ -1235,6 +1393,8 @@ public static class OtelAttributes
     /// <summary>
     /// The result of a task run.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>success</description></item>
@@ -1247,6 +1407,8 @@ public static class OtelAttributes
     /// <summary>
     /// The [URL](https://wikipedia.org/wiki/URL) of the pipeline task run, providing the complete address in order to locate and identify the pipeline task run.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>https://github.com/open-telemetry/semantic-conventions/actions/runs/9753949763/job/26920038674?pr=1075</description></item>
@@ -1256,6 +1418,8 @@ public static class OtelAttributes
     /// <summary>
     /// The type of the task within a pipeline.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>build</description></item>
@@ -1266,6 +1430,8 @@ public static class OtelAttributes
     public const string CICD_PIPELINE_TASK_TYPE = "cicd.pipeline.task.type";
     /// <summary>
     /// The name of a component of the CICD system.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>controller</description></item>
@@ -1276,6 +1442,8 @@ public static class OtelAttributes
     public const string CICD_SYSTEM_COMPONENT = "cicd.system.component";
     /// <summary>
     /// The unique identifier of a worker within a CICD system.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>abc123</description></item>
@@ -1286,6 +1454,8 @@ public static class OtelAttributes
     public const string CICD_WORKER_ID = "cicd.worker.id";
     /// <summary>
     /// The name of a worker within a CICD system.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>agent-abc</description></item>
@@ -1297,6 +1467,8 @@ public static class OtelAttributes
     /// <summary>
     /// The state of a CICD worker / agent.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>idle</description></item>
@@ -1307,6 +1479,8 @@ public static class OtelAttributes
     public const string CICD_WORKER_STATE = "cicd.worker.state";
     /// <summary>
     /// The [URL](https://wikipedia.org/wiki/URL) of the worker, providing the complete address in order to locate and identify the worker.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>https://cicd.example.org/worker/abc123</description></item>
@@ -1344,6 +1518,8 @@ public static class OtelAttributes
     /// <summary>
     /// The cloud account ID the resource is assigned to.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>111111111111</description></item>
@@ -1377,9 +1553,6 @@ public static class OtelAttributes
     /// <summary>
     /// Name of the cloud provider.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string CLOUD_PROVIDER = "cloud.provider";
     /// <summary>
@@ -1414,6 +1587,8 @@ public static class OtelAttributes
     /// <summary>
     /// The [event_id](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md#id) uniquely identifies the event.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>123e4567-e89b-12d3-a456-426614174000</description></item>
@@ -1424,6 +1599,8 @@ public static class OtelAttributes
     /// <summary>
     /// The [source](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md#source-1) identifies the context in which an event happened.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>https://github.com/cloudevents</description></item>
@@ -1435,18 +1612,24 @@ public static class OtelAttributes
     /// <summary>
     /// The [version of the CloudEvents specification](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md#specversion) which the event uses.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 1.0</para>
     /// </remarks>
     public const string CLOUDEVENTS_EVENT_SPEC_VERSION = "cloudevents.event_spec_version";
     /// <summary>
     /// The [subject](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md#subject) of the event in the context of the event producer (identified by source).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: mynewfile.jpg</para>
     /// </remarks>
     public const string CLOUDEVENTS_EVENT_SUBJECT = "cloudevents.event_subject";
     /// <summary>
     /// The [event_type](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/spec.md#type) contains a value describing the type of event related to the originating occurrence.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>com.github.pull_request.opened</description></item>
@@ -1594,6 +1777,8 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `code.column.number`
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 16</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `code.column.number`.\", \"reason\": \"renamed\", \"renamed_to\": \"code.column.number\"}")]
@@ -1601,18 +1786,24 @@ public static class OtelAttributes
     /// <summary>
     /// The column number in `code.file.path` best representing the operation. It SHOULD point within the code unit named in `code.function.name`. This attribute MUST NOT be used on the Profile signal since the data is already captured in 'message Line'. This constraint is imposed to prevent redundancy and maintain data integrity.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 16</para>
     /// </remarks>
     public const string CODE_COLUMN_NUMBER = "code.column.number";
     /// <summary>
     /// The source code file name that identifies the code unit as uniquely as possible (preferably an absolute file path). This attribute MUST NOT be used on the Profile signal since the data is already captured in 'message Function'. This constraint is imposed to prevent redundancy and maintain data integrity.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: /usr/local/MyApplication/content_root/app/index.php</para>
     /// </remarks>
     public const string CODE_FILE_PATH = "code.file.path";
     /// <summary>
     /// Deprecated, use `code.file.path` instead
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: /usr/local/MyApplication/content_root/app/index.php</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `code.file.path`.\", \"reason\": \"renamed\", \"renamed_to\": \"code.file.path\"}")]
@@ -1620,6 +1811,8 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `code.function.name` instead
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: serveRequest</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Value should be included in `code.function.name` which is expected to be a fully-qualified name.\n\", \"reason\": \"uncategorized\"}")]
@@ -1641,12 +1834,16 @@ public static class OtelAttributes
     /// <summary>
     /// The line number in `code.file.path` best representing the operation. It SHOULD point within the code unit named in `code.function.name`. This attribute MUST NOT be used on the Profile signal since the data is already captured in 'message Line'. This constraint is imposed to prevent redundancy and maintain data integrity.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 42</para>
     /// </remarks>
     public const string CODE_LINE_NUMBER = "code.line.number";
     /// <summary>
     /// Deprecated, use `code.line.number` instead
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 42</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `code.line.number`.\", \"reason\": \"renamed\", \"renamed_to\": \"code.line.number\"}")]
@@ -1654,6 +1851,8 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, namespace is now included into `code.function.name`
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: com.example.MyHttpService</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Value should be included in `code.function.name` which is expected to be a fully-qualified name.\n\", \"reason\": \"uncategorized\"}")]
@@ -1661,6 +1860,8 @@ public static class OtelAttributes
     /// <summary>
     /// A stacktrace as a string in the natural representation for the language runtime. The representation is identical to [`exception.stacktrace`](/docs/exceptions/exceptions-spans.md#stacktrace-representation). This attribute MUST NOT be used on the Profile signal since the data is already captured in 'message Location'. This constraint is imposed to prevent redundancy and maintain data integrity.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: at com.example.GenerateTrace.methodB(GenerateTrace.java:13)\n at com.example.GenerateTrace.methodA(GenerateTrace.java:9)\n at com.example.GenerateTrace.main(GenerateTrace.java:5) </para>
     /// </remarks>
     public const string CODE_STACKTRACE = "code.stacktrace";
@@ -1681,6 +1882,8 @@ public static class OtelAttributes
     /// <summary>
     /// All the command arguments (including the command/executable itself) run by the container.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["otelcontribcol", "--config", "config.yaml"]</description></item>
@@ -1690,6 +1893,8 @@ public static class OtelAttributes
     /// <summary>
     /// The full command run by the container as a single string representing the full command.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>otelcontribcol --config config.yaml</description></item>
@@ -1698,6 +1903,8 @@ public static class OtelAttributes
     public const string CONTAINER_COMMAND_LINE = "container.command_line";
     /// <summary>
     /// Deprecated, use `cpu.mode` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>user</description></item>
@@ -1733,6 +1940,8 @@ public static class OtelAttributes
     /// <summary>
     /// Container ID. Usually a UUID, as for example used to [identify Docker containers](https://docs.docker.com/engine/containers/run/#container-identification). The UUID might be abbreviated.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>a3bf90e006b2</description></item>
@@ -1754,6 +1963,8 @@ public static class OtelAttributes
     /// <summary>
     /// Name of the image the container was built on.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>gcr.io/opentelemetry/operator</description></item>
@@ -1775,6 +1986,8 @@ public static class OtelAttributes
     /// <summary>
     /// Container image tags. An example can be found in [Docker Image Inspect](https://docs.docker.com/reference/api/engine/version/v1.43/#tag/Image/operation/ImageInspect). Should be only the `<tag>` section of the full name for example from `registry.example.com/my-org/my-image:<tag>`.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["v1.27.1", "3.5.7-0"]</description></item>
@@ -1795,6 +2008,8 @@ public static class OtelAttributes
     public const string CONTAINER_LABEL = "container.label";
     /// <summary>
     /// Deprecated, use `container.label` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>nginx</description></item>
@@ -1805,6 +2020,8 @@ public static class OtelAttributes
     /// <summary>
     /// Container name used by container runtime.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry-autoconf</description></item>
@@ -1814,6 +2031,8 @@ public static class OtelAttributes
     /// <summary>
     /// The container runtime managing this container.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>docker</description></item>
@@ -1826,6 +2045,8 @@ public static class OtelAttributes
     /// <summary>
     /// A description about the runtime which could include, for example details about the CRI/API version being used or other customisations.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>docker://19.3.1 - CRI: 1.22.0</description></item>
@@ -1835,6 +2056,8 @@ public static class OtelAttributes
     /// <summary>
     /// The container runtime managing this container.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>docker</description></item>
@@ -1846,6 +2069,8 @@ public static class OtelAttributes
     /// <summary>
     /// The version of the runtime of this process, as returned by the runtime without modification.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 1.0.0</para>
     /// </remarks>
     public const string CONTAINER_RUNTIME_VERSION = "container.runtime.version";
@@ -1853,6 +2078,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// The logical CPU number [0..n-1]
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1</description></item>
@@ -1861,6 +2088,8 @@ public static class OtelAttributes
     public const string CPU_LOGICAL_NUMBER = "cpu.logical_number";
     /// <summary>
     /// The mode of the CPU
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>user</description></item>
@@ -1872,6 +2101,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// Value of the garbage collector collection generation.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0</description></item>
@@ -1884,34 +2115,34 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// Deprecated, use `cassandra.consistency.level` instead.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `cassandra.consistency.level`.\", \"reason\": \"renamed\", \"renamed_to\": \"cassandra.consistency.level\"}")]
     public const string DB_CASSANDRA_CONSISTENCY_LEVEL = "db.cassandra.consistency_level";
     /// <summary>
     /// Deprecated, use `cassandra.coordinator.dc` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: us-west-2</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `cassandra.coordinator.dc`.\", \"reason\": \"renamed\", \"renamed_to\": \"cassandra.coordinator.dc\"}")]
     public const string DB_CASSANDRA_COORDINATOR_DC = "db.cassandra.coordinator.dc";
     /// <summary>
     /// Deprecated, use `cassandra.coordinator.id` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: be13faa2-8574-4d71-926d-27f16cf8a7af</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `cassandra.coordinator.id`.\", \"reason\": \"renamed\", \"renamed_to\": \"cassandra.coordinator.id\"}")]
     public const string DB_CASSANDRA_COORDINATOR_ID = "db.cassandra.coordinator.id";
     /// <summary>
     /// Deprecated, use `cassandra.query.idempotent` instead.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `cassandra.query.idempotent`.\", \"reason\": \"renamed\", \"renamed_to\": \"cassandra.query.idempotent\"}")]
     public const string DB_CASSANDRA_IDEMPOTENCE = "db.cassandra.idempotence";
     /// <summary>
     /// Deprecated, use `cassandra.page.size` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>5000</description></item>
@@ -1921,6 +2152,8 @@ public static class OtelAttributes
     public const string DB_CASSANDRA_PAGE_SIZE = "db.cassandra.page_size";
     /// <summary>
     /// Deprecated, use `cassandra.speculative_execution.count` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0</description></item>
@@ -1931,6 +2164,8 @@ public static class OtelAttributes
     public const string DB_CASSANDRA_SPECULATIVE_EXECUTION_COUNT = "db.cassandra.speculative_execution_count";
     /// <summary>
     /// Deprecated, use `db.collection.name` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: mytable</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `db.collection.name`.\", \"reason\": \"renamed\", \"renamed_to\": \"db.collection.name\"}")]
@@ -1938,6 +2173,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the connection pool; unique within the instrumented application. In case the connection pool implementation doesn't provide a name, instrumentation SHOULD use a combination of parameters that would make the name unique, for example, combining attributes `server.address`, `server.port`, and `db.namespace`, formatted as `server.address:server.port/db.namespace`. Instrumentations that generate connection pool name following different patterns SHOULD document it.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>myDataSource</description></item>
@@ -1946,6 +2183,8 @@ public static class OtelAttributes
     public const string DB_CLIENT_CONNECTION_POOL_NAME = "db.client.connection.pool.name";
     /// <summary>
     /// The state of a connection in the pool
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>idle</description></item>
@@ -1954,6 +2193,8 @@ public static class OtelAttributes
     public const string DB_CLIENT_CONNECTION_STATE = "db.client.connection.state";
     /// <summary>
     /// Deprecated, use `db.client.connection.pool.name` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>myDataSource</description></item>
@@ -1963,6 +2204,8 @@ public static class OtelAttributes
     public const string DB_CLIENT_CONNECTIONS_POOL_NAME = "db.client.connections.pool.name";
     /// <summary>
     /// Deprecated, use `db.client.connection.state` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>idle</description></item>
@@ -1984,26 +2227,29 @@ public static class OtelAttributes
     public const string DB_COLLECTION_NAME = "db.collection.name";
     /// <summary>
     /// Deprecated, use `server.address`, `server.port` attributes instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: Server=(localdb)\v11.0;Integrated Security=true;</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `server.address` and `server.port`.\n\", \"reason\": \"uncategorized\"}")]
     public const string DB_CONNECTION_STRING = "db.connection_string";
     /// <summary>
     /// Deprecated, use `azure.client.id` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 3ba4827d-4422-483f-b59f-85b74211c11d</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `azure.client.id`.\", \"reason\": \"renamed\", \"renamed_to\": \"azure.client.id\"}")]
     public const string DB_COSMOSDB_CLIENT_ID = "db.cosmosdb.client_id";
     /// <summary>
     /// Deprecated, use `azure.cosmosdb.connection.mode` instead.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `azure.cosmosdb.connection.mode`.\", \"reason\": \"renamed\", \"renamed_to\": \"azure.cosmosdb.connection.mode\"}")]
     public const string DB_COSMOSDB_CONNECTION_MODE = "db.cosmosdb.connection_mode";
     /// <summary>
     /// Deprecated, use `cosmosdb.consistency.level` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Eventual</description></item>
@@ -2017,20 +2263,21 @@ public static class OtelAttributes
     public const string DB_COSMOSDB_CONSISTENCY_LEVEL = "db.cosmosdb.consistency_level";
     /// <summary>
     /// Deprecated, use `db.collection.name` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: mytable</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `db.collection.name`.\", \"reason\": \"renamed\", \"renamed_to\": \"db.collection.name\"}")]
     public const string DB_COSMOSDB_CONTAINER = "db.cosmosdb.container";
     /// <summary>
     /// Deprecated, no replacement at this time.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Removed, no replacement at this time.\n\", \"reason\": \"obsoleted\"}")]
     public const string DB_COSMOSDB_OPERATION_TYPE = "db.cosmosdb.operation_type";
     /// <summary>
     /// Deprecated, use `azure.cosmosdb.operation.contacted_regions` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["North Central US", "Australia East", "Australia Southeast"]</description></item>
@@ -2040,6 +2287,8 @@ public static class OtelAttributes
     public const string DB_COSMOSDB_REGIONS_CONTACTED = "db.cosmosdb.regions_contacted";
     /// <summary>
     /// Deprecated, use `azure.cosmosdb.operation.request_charge` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>46.18</description></item>
@@ -2050,14 +2299,13 @@ public static class OtelAttributes
     public const string DB_COSMOSDB_REQUEST_CHARGE = "db.cosmosdb.request_charge";
     /// <summary>
     /// Deprecated, use `azure.cosmosdb.request.body.size` instead.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `azure.cosmosdb.request.body.size`.\", \"reason\": \"renamed\", \"renamed_to\": \"azure.cosmosdb.request.body.size\"}")]
     public const string DB_COSMOSDB_REQUEST_CONTENT_LENGTH = "db.cosmosdb.request_content_length";
     /// <summary>
     /// Deprecated, use `db.response.status_code` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>200</description></item>
@@ -2068,6 +2316,8 @@ public static class OtelAttributes
     public const string DB_COSMOSDB_STATUS_CODE = "db.cosmosdb.status_code";
     /// <summary>
     /// Deprecated, use `azure.cosmosdb.response.sub_status_code` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1000</description></item>
@@ -2079,6 +2329,8 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `db.namespace` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>e9106fc68e3044f0b1475b04bf4ffd5f</description></item>
@@ -2089,6 +2341,8 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `elasticsearch.node.name` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>instance-0000000001</description></item>
@@ -2099,6 +2353,8 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `db.operation.parameter` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>test-index</description></item>
@@ -2109,12 +2365,16 @@ public static class OtelAttributes
     public const string DB_ELASTICSEARCH_PATH_PARTS = "db.elasticsearch.path_parts";
     /// <summary>
     /// Deprecated, no general replacement at this time. For Elasticsearch, use `db.elasticsearch.node.name` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: mysql-e26b99z.example.com</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Removed, no general replacement at this time. For Elasticsearch, use `db.elasticsearch.node.name` instead.\n\", \"reason\": \"obsoleted\"}")]
     public const string DB_INSTANCE_ID = "db.instance.id";
     /// <summary>
     /// Removed, no replacement at this time.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>org.postgresql.Driver</description></item>
@@ -2125,18 +2385,24 @@ public static class OtelAttributes
     public const string DB_JDBC_DRIVER_CLASSNAME = "db.jdbc.driver_classname";
     /// <summary>
     /// Deprecated, use `db.collection.name` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: mytable</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `db.collection.name`.\", \"reason\": \"renamed\", \"renamed_to\": \"db.collection.name\"}")]
     public const string DB_MONGODB_COLLECTION = "db.mongodb.collection";
     /// <summary>
     /// Deprecated, SQL Server instance is now populated as a part of `db.namespace` attribute.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: MSSQLSERVER</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Removed, no replacement at this time.\", \"reason\": \"obsoleted\"}")]
     public const string DB_MSSQL_INSTANCE_NAME = "db.mssql.instance_name";
     /// <summary>
     /// Deprecated, use `db.namespace` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>customers</description></item>
@@ -2160,6 +2426,8 @@ public static class OtelAttributes
     public const string DB_NAMESPACE = "db.namespace";
     /// <summary>
     /// Deprecated, use `db.operation.name` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>findAndModify</description></item>
@@ -2251,6 +2519,8 @@ public static class OtelAttributes
     public const string DB_QUERY_TEXT = "db.query.text";
     /// <summary>
     /// Deprecated, use `db.namespace` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0</description></item>
@@ -2262,6 +2532,8 @@ public static class OtelAttributes
     public const string DB_REDIS_DATABASE_INDEX = "db.redis.database_index";
     /// <summary>
     /// Number of rows returned by the operation.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>10</description></item>
@@ -2286,12 +2558,16 @@ public static class OtelAttributes
     public const string DB_RESPONSE_STATUS_CODE = "db.response.status_code";
     /// <summary>
     /// Deprecated, use `db.collection.name` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: mytable</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `db.collection.name`, but only if not extracting the value from `db.query.text`.\", \"reason\": \"uncategorized\"}")]
     public const string DB_SQL_TABLE = "db.sql.table";
     /// <summary>
     /// The database statement being executed.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>SELECT * FROM wuser_table</description></item>
@@ -2313,9 +2589,6 @@ public static class OtelAttributes
     public const string DB_STORED_PROCEDURE_NAME = "db.stored_procedure.name";
     /// <summary>
     /// Deprecated, use `db.system.name` instead.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `db.system.name`.\", \"reason\": \"renamed\", \"renamed_to\": \"db.system.name\"}")]
     public const string DB_SYSTEM = "db.system";
@@ -2331,6 +2604,8 @@ public static class OtelAttributes
     public const string DB_SYSTEM_NAME = "db.system.name";
     /// <summary>
     /// Deprecated, no replacement at this time.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>readonly_user</description></item>
@@ -2344,6 +2619,8 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `deployment.environment.name` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>staging</description></item>
@@ -2368,6 +2645,8 @@ public static class OtelAttributes
     /// <summary>
     /// The id of the deployment.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1208</description></item>
@@ -2377,6 +2656,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the deployment.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>deploy my app</description></item>
@@ -2387,9 +2668,6 @@ public static class OtelAttributes
     /// <summary>
     /// The status of the deployment.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string DEPLOYMENT_STATUS = "deployment.status";
     #endregion
@@ -2409,6 +2687,8 @@ public static class OtelAttributes
     public const string DESTINATION_ADDRESS = "destination.address";
     /// <summary>
     /// Destination port number
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>3389</description></item>
@@ -2474,6 +2754,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// The disk IO operation direction.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>read</description></item>
@@ -2484,6 +2766,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// The list of IPv4 or IPv6 addresses resolved during DNS lookup.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["10.0.0.1", "2001:0db8:85a3:0000:0000:8a2e:0370:7334"]</description></item>
@@ -2506,6 +2790,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// Name of the garbage collector managed heap generation.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>gen0</description></item>
@@ -2519,6 +2805,8 @@ public static class OtelAttributes
     /// <summary>
     /// Represents the human-readable identifier of the node/instance to which a request was routed.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>instance-0000000001</description></item>
@@ -2552,12 +2840,16 @@ public static class OtelAttributes
     public const string ENDUSER_PSEUDO_ID = "enduser.pseudo.id";
     /// <summary>
     /// Deprecated, use `user.roles` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: admin</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Use `user.roles` instead.\", \"reason\": \"uncategorized\"}")]
     public const string ENDUSER_ROLE = "enduser.role";
     /// <summary>
     /// Deprecated, no replacement at this time.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: read:message, write:files</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Removed, no replacement at this time.\", \"reason\": \"obsoleted\"}")]
@@ -2596,6 +2888,8 @@ public static class OtelAttributes
     /// <summary>
     /// Identifies the class / type of event.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>browser.mouse.click</description></item>
@@ -2609,14 +2903,13 @@ public static class OtelAttributes
     /// <summary>
     /// Indicates that the exception is escaping the scope of the span.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"It's no longer recommended to record exceptions that are handled and do not escape the scope of a span.\n\", \"reason\": \"obsoleted\"}")]
     public const string EXCEPTION_ESCAPED = "exception.escaped";
     /// <summary>
     /// The exception message.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Division by zero</description></item>
@@ -2627,12 +2920,16 @@ public static class OtelAttributes
     /// <summary>
     /// A stacktrace as a string in the natural representation for the language runtime. The representation is to be determined and documented by each language SIG.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: Exception in thread "main" java.lang.RuntimeException: Test exception\n at com.example.GenerateTrace.methodB(GenerateTrace.java:13)\n at com.example.GenerateTrace.methodA(GenerateTrace.java:9)\n at com.example.GenerateTrace.main(GenerateTrace.java:5) </para>
     /// </remarks>
     public const string EXCEPTION_STACKTRACE = "exception.stacktrace";
     /// <summary>
     /// The type of the exception (its fully-qualified class name, if applicable). The dynamic type of the exception should be preferred over the static type in languages that support it.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>java.net.ConnectException</description></item>
@@ -2645,20 +2942,21 @@ public static class OtelAttributes
     /// <summary>
     /// A boolean that is true if the serverless function is executed for the first time (aka cold-start).
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string FAAS_COLDSTART = "faas.coldstart";
     /// <summary>
     /// A string containing the schedule period as [Cron Expression](https://docs.oracle.com/cd/E12058_01/doc/doc.1014/e12030/cron_expressions.htm).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 0/5 * * * ? *</para>
     /// </remarks>
     public const string FAAS_CRON = "faas.cron";
     /// <summary>
     /// The name of the source on which the triggering operation was performed. For example, in Cloud Storage or S3 corresponds to the bucket name, and in Cosmos DB to the database name.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>myBucketName</description></item>
@@ -2669,6 +2967,8 @@ public static class OtelAttributes
     /// <summary>
     /// The document name/table subjected to the operation. For example, in Cloud Storage or S3 is the name of the file, and in Cosmos DB the table name.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>myFile.txt</description></item>
@@ -2678,14 +2978,13 @@ public static class OtelAttributes
     public const string FAAS_DOCUMENT_NAME = "faas.document.name";
     /// <summary>
     /// Describes the type of the operation that was performed on the data.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string FAAS_DOCUMENT_OPERATION = "faas.document.operation";
     /// <summary>
     /// A string containing the time when the data was accessed in the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format expressed in [UTC](https://www.w3.org/TR/NOTE-datetime).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 2020-01-23T13:47:06Z</para>
     /// </remarks>
     public const string FAAS_DOCUMENT_TIME = "faas.document.time";
@@ -2704,6 +3003,8 @@ public static class OtelAttributes
     /// <summary>
     /// The invocation ID of the current function invocation.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: af9d5aa4-a685-4c5f-a22b-444f80b3cc28</para>
     /// </remarks>
     public const string FAAS_INVOCATION_ID = "faas.invocation_id";
@@ -2761,15 +3062,14 @@ public static class OtelAttributes
     /// <summary>
     /// A string containing the function invocation time in the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format expressed in [UTC](https://www.w3.org/TR/NOTE-datetime).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 2020-01-23T13:47:06Z</para>
     /// </remarks>
     public const string FAAS_TIME = "faas.time";
     /// <summary>
     /// Type of the trigger which caused this function invocation.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string FAAS_TRIGGER = "faas.trigger";
     /// <summary>
@@ -2789,6 +3089,8 @@ public static class OtelAttributes
     /// <summary>
     /// The unique identifier for the flag evaluation context. For example, the targeting key.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>5157782b-2203-4c80-a857-dbbd5e7761db</description></item>
@@ -2797,6 +3099,8 @@ public static class OtelAttributes
     public const string FEATURE_FLAG_CONTEXT_ID = "feature_flag.context.id";
     /// <summary>
     /// Deprecated, use `error.message` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Flag `header-color` expected type `string` but found type `number`</description></item>
@@ -2806,6 +3110,8 @@ public static class OtelAttributes
     public const string FEATURE_FLAG_EVALUATION_ERROR_MESSAGE = "feature_flag.evaluation.error.message";
     /// <summary>
     /// Deprecated, use `feature_flag.result.reason` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>static</description></item>
@@ -2818,6 +3124,8 @@ public static class OtelAttributes
     public const string FEATURE_FLAG_EVALUATION_REASON = "feature_flag.evaluation.reason";
     /// <summary>
     /// The lookup key of the feature flag.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>logo-color</description></item>
@@ -2826,6 +3134,8 @@ public static class OtelAttributes
     public const string FEATURE_FLAG_KEY = "feature_flag.key";
     /// <summary>
     /// Identifies the feature flag provider.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Flag Manager</description></item>
@@ -2835,6 +3145,8 @@ public static class OtelAttributes
     /// <summary>
     /// The reason code which shows how a feature flag value was determined.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>static</description></item>
@@ -2874,6 +3186,8 @@ public static class OtelAttributes
     /// <summary>
     /// The identifier of the [flag set](https://openfeature.dev/specification/glossary/#flag-set) to which the feature flag belongs.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>proj-1</description></item>
@@ -2884,6 +3198,8 @@ public static class OtelAttributes
     public const string FEATURE_FLAG_SET_ID = "feature_flag.set.id";
     /// <summary>
     /// Deprecated, use `feature_flag.result.variant` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>red</description></item>
@@ -2896,6 +3212,8 @@ public static class OtelAttributes
     /// <summary>
     /// The version of the ruleset used during the evaluation. This may be any stable value which uniquely identifies the ruleset.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1</description></item>
@@ -2956,6 +3274,8 @@ public static class OtelAttributes
     /// <summary>
     /// Directory where the file is located. It should include the drive letter, when appropriate.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>/home/user</description></item>
@@ -2991,6 +3311,8 @@ public static class OtelAttributes
     /// <summary>
     /// Primary Group ID (GID) of the file.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1000</description></item>
@@ -3000,6 +3322,8 @@ public static class OtelAttributes
     /// <summary>
     /// Primary group name of the file.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>users</description></item>
@@ -3009,6 +3333,8 @@ public static class OtelAttributes
     /// <summary>
     /// Inode representing the file in the filesystem.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>256383</description></item>
@@ -3018,6 +3344,8 @@ public static class OtelAttributes
     /// <summary>
     /// Mode of the file in octal representation.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0640</description></item>
@@ -3027,6 +3355,8 @@ public static class OtelAttributes
     /// <summary>
     /// Time when the file content was last modified, in ISO 8601 format.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>2021-01-01T12:00:00Z</description></item>
@@ -3036,6 +3366,8 @@ public static class OtelAttributes
     /// <summary>
     /// Name of the file including the extension, without the directory.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>example.png</description></item>
@@ -3045,6 +3377,8 @@ public static class OtelAttributes
     /// <summary>
     /// The user ID (UID) or security identifier (SID) of the file owner.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1000</description></item>
@@ -3054,6 +3388,8 @@ public static class OtelAttributes
     /// <summary>
     /// Username of the file owner.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>root</description></item>
@@ -3063,6 +3399,8 @@ public static class OtelAttributes
     /// <summary>
     /// Full path to the file, including the file name. It should include the drive letter, when appropriate.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>/home/alice/example.png</description></item>
@@ -3073,9 +3411,6 @@ public static class OtelAttributes
     /// <summary>
     /// File size in bytes.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string FILE_SIZE = "file.size";
     /// <summary>
@@ -3095,6 +3430,8 @@ public static class OtelAttributes
     /// <summary>
     /// The container within GCP where the AppHub application is defined.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>projects/my-container-project</description></item>
@@ -3104,6 +3441,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the application as configured in AppHub.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>my-application</description></item>
@@ -3113,6 +3452,8 @@ public static class OtelAttributes
     /// <summary>
     /// The GCP zone or region where the application is defined.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>us-central1</description></item>
@@ -3144,6 +3485,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the service as configured in AppHub.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>my-service</description></item>
@@ -3175,6 +3518,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the workload as configured in AppHub.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>my-workload</description></item>
@@ -3184,6 +3529,8 @@ public static class OtelAttributes
     /// <summary>
     /// The container within GCP where the AppHub destination application is defined.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>projects/my-container-project</description></item>
@@ -3193,6 +3540,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the destination application as configured in AppHub.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>my-application</description></item>
@@ -3202,6 +3551,8 @@ public static class OtelAttributes
     /// <summary>
     /// The GCP zone or region where the destination application is defined.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>us-central1</description></item>
@@ -3211,22 +3562,18 @@ public static class OtelAttributes
     /// <summary>
     /// Criticality of a destination workload indicates its importance to the business as specified in [AppHub type enum](https://cloud.google.com/app-hub/docs/reference/rest/v1/Attributes#type)
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string GCP_APPHUB_DESTINATION_SERVICE_CRITICALITY_TYPE = "gcp.apphub_destination.service.criticality_type";
     /// <summary>
     /// Software lifecycle stage of a destination service as defined [AppHub environment type](https://cloud.google.com/app-hub/docs/reference/rest/v1/Attributes#type_1)
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string GCP_APPHUB_DESTINATION_SERVICE_ENVIRONMENT_TYPE = "gcp.apphub_destination.service.environment_type";
     /// <summary>
     /// The name of the destination service as configured in AppHub.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>my-service</description></item>
@@ -3236,22 +3583,18 @@ public static class OtelAttributes
     /// <summary>
     /// Criticality of a destination workload indicates its importance to the business as specified in [AppHub type enum](https://cloud.google.com/app-hub/docs/reference/rest/v1/Attributes#type)
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string GCP_APPHUB_DESTINATION_WORKLOAD_CRITICALITY_TYPE = "gcp.apphub_destination.workload.criticality_type";
     /// <summary>
     /// Environment of a destination workload is the stage of a software lifecycle as provided in the [AppHub environment type](https://cloud.google.com/app-hub/docs/reference/rest/v1/Attributes#type_1)
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string GCP_APPHUB_DESTINATION_WORKLOAD_ENVIRONMENT_TYPE = "gcp.apphub_destination.workload.environment_type";
     /// <summary>
     /// The name of the destination workload as configured in AppHub.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>my-workload</description></item>
@@ -3276,6 +3619,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the Cloud Run [execution](https://cloud.google.com/run/docs/managing/job-executions) being run for the Job, as set by the [`CLOUD_RUN_EXECUTION`](https://cloud.google.com/run/docs/container-contract#jobs-env-vars) environment variable.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>job-name-xxxx</description></item>
@@ -3286,6 +3631,8 @@ public static class OtelAttributes
     /// <summary>
     /// The index for a task within an execution as provided by the [`CLOUD_RUN_TASK_INDEX`](https://cloud.google.com/run/docs/container-contract#jobs-env-vars) environment variable.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0</description></item>
@@ -3296,6 +3643,8 @@ public static class OtelAttributes
     /// <summary>
     /// The hostname of a GCE instance. This is the full value of the default or [custom hostname](https://cloud.google.com/compute/docs/instances/custom-hostname-vm).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>my-host1234.example.com</description></item>
@@ -3306,6 +3655,8 @@ public static class OtelAttributes
     /// <summary>
     /// The instance name of a GCE instance. This is the value provided by `host.name`, the visible name of the instance in the Cloud Console UI, and the prefix for the default hostname of the instance as defined by the [default internal DNS name](https://cloud.google.com/compute/docs/internal-dns#instance-fully-qualified-domain-names).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>instance-1</description></item>
@@ -3317,6 +3668,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// Free-form description of the GenAI agent provided by the application.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Helps with math problems</description></item>
@@ -3326,6 +3679,8 @@ public static class OtelAttributes
     public const string GEN_AI_AGENT_DESCRIPTION = "gen_ai.agent.description";
     /// <summary>
     /// The unique identifier of the GenAI agent.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>asst_5j66UpCpwteGg4YSxUnt7lPY</description></item>
@@ -3334,6 +3689,8 @@ public static class OtelAttributes
     public const string GEN_AI_AGENT_ID = "gen_ai.agent.id";
     /// <summary>
     /// Human-readable name of the GenAI agent provided by the application.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Math Tutor</description></item>
@@ -3343,6 +3700,8 @@ public static class OtelAttributes
     public const string GEN_AI_AGENT_NAME = "gen_ai.agent.name";
     /// <summary>
     /// Deprecated, use Event API to report completions contents.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>[{'role': 'assistant', 'content': 'The capital of France is Paris.'}]</description></item>
@@ -3352,6 +3711,8 @@ public static class OtelAttributes
     public const string GEN_AI_COMPLETION = "gen_ai.completion";
     /// <summary>
     /// The unique identifier for a conversation (session, thread), used to store and correlate messages within this conversation.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>conv_5j66UpCpwteGg4YSxUnt7lPY</description></item>
@@ -3371,6 +3732,8 @@ public static class OtelAttributes
     public const string GEN_AI_DATA_SOURCE_ID = "gen_ai.data_source.id";
     /// <summary>
     /// The number of dimensions the resulting output embeddings should have.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>512</description></item>
@@ -3380,6 +3743,8 @@ public static class OtelAttributes
     public const string GEN_AI_EMBEDDINGS_DIMENSION_COUNT = "gen_ai.embeddings.dimension.count";
     /// <summary>
     /// A free-form explanation for the assigned score provided by the evaluator.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>The response is factually accurate but lacks sufficient detail to fully address the question.</description></item>
@@ -3388,6 +3753,8 @@ public static class OtelAttributes
     public const string GEN_AI_EVALUATION_EXPLANATION = "gen_ai.evaluation.explanation";
     /// <summary>
     /// The name of the evaluation metric used for the GenAI response.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Relevance</description></item>
@@ -3413,6 +3780,8 @@ public static class OtelAttributes
     public const string GEN_AI_EVALUATION_SCORE_LABEL = "gen_ai.evaluation.score.label";
     /// <summary>
     /// The evaluation score returned by the evaluator.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>4.0</description></item>
@@ -3434,14 +3803,13 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `gen_ai.output.type`.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `gen_ai.output.type`.\", \"reason\": \"renamed\", \"renamed_to\": \"gen_ai.output.type\"}")]
     public const string GEN_AI_OPENAI_REQUEST_RESPONSE_FORMAT = "gen_ai.openai.request.response_format";
     /// <summary>
     /// Deprecated, use `gen_ai.request.seed`.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>100</description></item>
@@ -3451,14 +3819,13 @@ public static class OtelAttributes
     public const string GEN_AI_OPENAI_REQUEST_SEED = "gen_ai.openai.request.seed";
     /// <summary>
     /// Deprecated, use `openai.request.service_tier`.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `openai.request.service_tier`.\", \"reason\": \"renamed\", \"renamed_to\": \"openai.request.service_tier\"}")]
     public const string GEN_AI_OPENAI_REQUEST_SERVICE_TIER = "gen_ai.openai.request.service_tier";
     /// <summary>
     /// Deprecated, use `openai.response.service_tier`.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>scale</description></item>
@@ -3469,6 +3836,8 @@ public static class OtelAttributes
     public const string GEN_AI_OPENAI_RESPONSE_SERVICE_TIER = "gen_ai.openai.response.service_tier";
     /// <summary>
     /// Deprecated, use `openai.response.system_fingerprint`.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>fp_44709d6fcb</description></item>
@@ -3509,6 +3878,8 @@ public static class OtelAttributes
     public const string GEN_AI_OUTPUT_TYPE = "gen_ai.output.type";
     /// <summary>
     /// Deprecated, use Event API to report prompt contents.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>[{'role': 'user', 'content': 'What is the capital of France?'}]</description></item>
@@ -3528,6 +3899,8 @@ public static class OtelAttributes
     public const string GEN_AI_PROVIDER_NAME = "gen_ai.provider.name";
     /// <summary>
     /// The target number of candidate completions to return.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>3</description></item>
@@ -3548,6 +3921,8 @@ public static class OtelAttributes
     public const string GEN_AI_REQUEST_ENCODING_FORMATS = "gen_ai.request.encoding_formats";
     /// <summary>
     /// The frequency penalty setting for the GenAI request.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0.1</description></item>
@@ -3556,6 +3931,8 @@ public static class OtelAttributes
     public const string GEN_AI_REQUEST_FREQUENCY_PENALTY = "gen_ai.request.frequency_penalty";
     /// <summary>
     /// The maximum number of tokens the model generates for a request.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>100</description></item>
@@ -3564,11 +3941,15 @@ public static class OtelAttributes
     public const string GEN_AI_REQUEST_MAX_TOKENS = "gen_ai.request.max_tokens";
     /// <summary>
     /// The name of the GenAI model a request is being made to.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: gpt-4</para>
     /// </remarks>
     public const string GEN_AI_REQUEST_MODEL = "gen_ai.request.model";
     /// <summary>
     /// The presence penalty setting for the GenAI request.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0.1</description></item>
@@ -3577,6 +3958,8 @@ public static class OtelAttributes
     public const string GEN_AI_REQUEST_PRESENCE_PENALTY = "gen_ai.request.presence_penalty";
     /// <summary>
     /// Requests with same seed value more likely to return same result.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>100</description></item>
@@ -3585,6 +3968,8 @@ public static class OtelAttributes
     public const string GEN_AI_REQUEST_SEED = "gen_ai.request.seed";
     /// <summary>
     /// List of sequences that the model will use to stop generating further tokens.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["forest", "lived"]</description></item>
@@ -3593,6 +3978,8 @@ public static class OtelAttributes
     public const string GEN_AI_REQUEST_STOP_SEQUENCES = "gen_ai.request.stop_sequences";
     /// <summary>
     /// The temperature setting for the GenAI request.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0.0</description></item>
@@ -3601,6 +3988,8 @@ public static class OtelAttributes
     public const string GEN_AI_REQUEST_TEMPERATURE = "gen_ai.request.temperature";
     /// <summary>
     /// The top_k sampling setting for the GenAI request.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1.0</description></item>
@@ -3609,6 +3998,8 @@ public static class OtelAttributes
     public const string GEN_AI_REQUEST_TOP_K = "gen_ai.request.top_k";
     /// <summary>
     /// The top_p sampling setting for the GenAI request.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1.0</description></item>
@@ -3617,6 +4008,8 @@ public static class OtelAttributes
     public const string GEN_AI_REQUEST_TOP_P = "gen_ai.request.top_p";
     /// <summary>
     /// Array of reasons the model stopped generating tokens, corresponding to each generation received.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["stop"]</description></item>
@@ -3626,6 +4019,8 @@ public static class OtelAttributes
     public const string GEN_AI_RESPONSE_FINISH_REASONS = "gen_ai.response.finish_reasons";
     /// <summary>
     /// The unique identifier for the completion.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>chatcmpl-123</description></item>
@@ -3634,6 +4029,8 @@ public static class OtelAttributes
     public const string GEN_AI_RESPONSE_ID = "gen_ai.response.id";
     /// <summary>
     /// The name of the model that generated the response.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>gpt-4-0613</description></item>
@@ -3642,9 +4039,6 @@ public static class OtelAttributes
     public const string GEN_AI_RESPONSE_MODEL = "gen_ai.response.model";
     /// <summary>
     /// Deprecated, use `gen_ai.provider.name` instead.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `gen_ai.provider.name`.\", \"reason\": \"renamed\", \"renamed_to\": \"gen_ai.provider.name\"}")]
     public const string GEN_AI_SYSTEM = "gen_ai.system";
@@ -3662,6 +4056,8 @@ public static class OtelAttributes
     public const string GEN_AI_SYSTEM_INSTRUCTIONS = "gen_ai.system_instructions";
     /// <summary>
     /// The type of token being counted.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>input</description></item>
@@ -3682,6 +4078,8 @@ public static class OtelAttributes
     public const string GEN_AI_TOOL_CALL_ARGUMENTS = "gen_ai.tool.call.arguments";
     /// <summary>
     /// The tool call identifier.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>call_mszuSIzqtI65i1wAUOE8w5H4</description></item>
@@ -3712,6 +4110,8 @@ public static class OtelAttributes
     public const string GEN_AI_TOOL_DEFINITIONS = "gen_ai.tool.definitions";
     /// <summary>
     /// The tool description.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Multiply two numbers</description></item>
@@ -3720,6 +4120,8 @@ public static class OtelAttributes
     public const string GEN_AI_TOOL_DESCRIPTION = "gen_ai.tool.description";
     /// <summary>
     /// Name of the tool utilized by the agent.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Flights</description></item>
@@ -3741,6 +4143,8 @@ public static class OtelAttributes
     public const string GEN_AI_TOOL_TYPE = "gen_ai.tool.type";
     /// <summary>
     /// Deprecated, use `gen_ai.usage.output_tokens` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>42</description></item>
@@ -3750,6 +4154,8 @@ public static class OtelAttributes
     public const string GEN_AI_USAGE_COMPLETION_TOKENS = "gen_ai.usage.completion_tokens";
     /// <summary>
     /// The number of tokens used in the GenAI input (prompt).
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>100</description></item>
@@ -3758,6 +4164,8 @@ public static class OtelAttributes
     public const string GEN_AI_USAGE_INPUT_TOKENS = "gen_ai.usage.input_tokens";
     /// <summary>
     /// The number of tokens used in the GenAI response (completion).
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>180</description></item>
@@ -3766,6 +4174,8 @@ public static class OtelAttributes
     public const string GEN_AI_USAGE_OUTPUT_TOKENS = "gen_ai.usage.output_tokens";
     /// <summary>
     /// Deprecated, use `gen_ai.usage.input_tokens` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>42</description></item>
@@ -3778,14 +4188,13 @@ public static class OtelAttributes
     /// <summary>
     /// Two-letter code representing continent’s name.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string GEO_CONTINENT_CODE = "geo.continent.code";
     /// <summary>
     /// Two-letter ISO Country Code ([ISO 3166-1 alpha2](https://wikipedia.org/wiki/ISO_3166-1#Codes)).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>CA</description></item>
@@ -3795,6 +4204,8 @@ public static class OtelAttributes
     /// <summary>
     /// Locality name. Represents the name of a city, town, village, or similar populated place.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Montreal</description></item>
@@ -3805,6 +4216,8 @@ public static class OtelAttributes
     /// <summary>
     /// Latitude of the geo location in [WGS84](https://wikipedia.org/wiki/World_Geodetic_System#WGS84).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>45.505918</description></item>
@@ -3814,6 +4227,8 @@ public static class OtelAttributes
     /// <summary>
     /// Longitude of the geo location in [WGS84](https://wikipedia.org/wiki/World_Geodetic_System#WGS84).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>-73.61483</description></item>
@@ -3823,6 +4238,8 @@ public static class OtelAttributes
     /// <summary>
     /// Postal code associated with the location. Values appropriate for this field may also be known as a postcode or ZIP code and will vary widely from country to country.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>94040</description></item>
@@ -3832,6 +4249,8 @@ public static class OtelAttributes
     /// <summary>
     /// Region ISO code ([ISO 3166-2](https://wikipedia.org/wiki/ISO_3166-2)).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>CA-QC</description></item>
@@ -3842,6 +4261,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// The type of memory.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>other</description></item>
@@ -3861,11 +4282,15 @@ public static class OtelAttributes
     public const string GRAPHQL_DOCUMENT = "graphql.document";
     /// <summary>
     /// The name of the operation being executed.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: findBookById</para>
     /// </remarks>
     public const string GRAPHQL_OPERATION_NAME = "graphql.operation.name";
     /// <summary>
     /// The type of the operation being executed.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>query</description></item>
@@ -3879,6 +4304,8 @@ public static class OtelAttributes
     /// <summary>
     /// Unique identifier for the application
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>2daa2797-e42b-4624-9322-ec3f968df4da</description></item>
@@ -3888,6 +4315,8 @@ public static class OtelAttributes
     /// <summary>
     /// Commit hash for the current release
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>e6134959463efd8966b20e75b913cafe3f5ec</description></item>
@@ -3897,6 +4326,8 @@ public static class OtelAttributes
     /// <summary>
     /// Time and date the release was created
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>2022-10-23T18:00:42Z</description></item>
@@ -3908,14 +4339,13 @@ public static class OtelAttributes
     /// <summary>
     /// The CPU architecture the host system is running on.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string HOST_ARCH = "host.arch";
     /// <summary>
     /// The amount of level 2 memory cache available to the processor (in Bytes).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>12288000</description></item>
@@ -3925,6 +4355,8 @@ public static class OtelAttributes
     /// <summary>
     /// Family or generation of the CPU.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>6</description></item>
@@ -3935,6 +4367,8 @@ public static class OtelAttributes
     /// <summary>
     /// Model identifier. It provides more granular information about the CPU, distinguishing it from other CPUs within the same family.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>6</description></item>
@@ -3945,6 +4379,8 @@ public static class OtelAttributes
     /// <summary>
     /// Model designation of the processor.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz</description></item>
@@ -3954,6 +4390,8 @@ public static class OtelAttributes
     /// <summary>
     /// Stepping or core revisions.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1</description></item>
@@ -3976,6 +4414,8 @@ public static class OtelAttributes
     /// <summary>
     /// Unique host ID. For Cloud, this must be the instance_id assigned by the cloud provider. For non-containerized systems, this should be the `machine-id`. See the table below for the sources to use to determine the `machine-id` based on operating system.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>fdbf79e8af94cb7f9e8df36789187052</description></item>
@@ -3985,6 +4425,8 @@ public static class OtelAttributes
     /// <summary>
     /// VM image ID or host OS image ID. For Cloud, this value is from the provider.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>ami-07b06b442921831e5</description></item>
@@ -3994,6 +4436,8 @@ public static class OtelAttributes
     /// <summary>
     /// Name of the VM image or OS install the host was instantiated from.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>infra-ami-eks-worker-node-7d4ec78312</description></item>
@@ -4004,6 +4448,8 @@ public static class OtelAttributes
     /// <summary>
     /// The version string of the VM image or host OS as defined in [Version Attributes](/docs/resource/README.md#version-attributes).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0.1</description></item>
@@ -4037,6 +4483,8 @@ public static class OtelAttributes
     /// <summary>
     /// Name of the host. On Unix systems, it may contain what the hostname command returns, or the fully qualified hostname, or another name specified by the user.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry-test</description></item>
@@ -4046,6 +4494,8 @@ public static class OtelAttributes
     /// <summary>
     /// Type of host. For Cloud, this must be the machine type.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>n1-standard-1</description></item>
@@ -4056,12 +4506,16 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// Deprecated, use `client.address` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 83.164.160.102</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `client.address`.\", \"reason\": \"renamed\", \"renamed_to\": \"client.address\"}")]
     public const string HTTP_CLIENT_IP = "http.client_ip";
     /// <summary>
     /// State of the HTTP connection in the HTTP connection pool.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>active</description></item>
@@ -4071,14 +4525,13 @@ public static class OtelAttributes
     public const string HTTP_CONNECTION_STATE = "http.connection.state";
     /// <summary>
     /// Deprecated, use `network.protocol.name` and `network.protocol.version` instead.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Split into `network.protocol.name` and `network.protocol.version`\", \"reason\": \"uncategorized\"}")]
     public const string HTTP_FLAVOR = "http.flavor";
     /// <summary>
     /// Deprecated, use one of `server.address`, `client.address` or `http.request.header.host` instead, depending on the usage.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>www.example.org</description></item>
@@ -4088,6 +4541,8 @@ public static class OtelAttributes
     public const string HTTP_HOST = "http.host";
     /// <summary>
     /// Deprecated, use `http.request.method` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>GET</description></item>
@@ -4100,6 +4555,8 @@ public static class OtelAttributes
     /// <summary>
     /// The size of the request payload body in bytes. This is the number of bytes transferred excluding headers and is often, but not always, present as the [Content-Length](https://www.rfc-editor.org/rfc/rfc9110.html#field.content-length) header. For requests using transport encoding, this should be the compressed size.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 3495</para>
     /// </remarks>
     public const string HTTP_REQUEST_BODY_SIZE = "http.request.body.size";
@@ -4131,6 +4588,8 @@ public static class OtelAttributes
     public const string HTTP_REQUEST_METHOD = "http.request.method";
     /// <summary>
     /// Original HTTP method sent by the client in the request line.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>GeT</description></item>
@@ -4151,17 +4610,23 @@ public static class OtelAttributes
     /// <summary>
     /// The total size of the request in bytes. This should be the total number of bytes sent over the wire, including the request line (HTTP/1.1), framing (HTTP/2 and HTTP/3), headers, and request body if any.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 1437</para>
     /// </remarks>
     public const string HTTP_REQUEST_SIZE = "http.request.size";
     /// <summary>
     /// Deprecated, use `http.request.header.content-length` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 3495</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `http.request.header.content-length`.\", \"reason\": \"uncategorized\"}")]
     public const string HTTP_REQUEST_CONTENT_LENGTH = "http.request_content_length";
     /// <summary>
     /// Deprecated, use `http.request.body.size` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 5493</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `http.request.body.size`.\", \"reason\": \"renamed\", \"renamed_to\": \"http.request.body.size\"}")]
@@ -4169,6 +4634,8 @@ public static class OtelAttributes
     /// <summary>
     /// The size of the response payload body in bytes. This is the number of bytes transferred excluding headers and is often, but not always, present as the [Content-Length](https://www.rfc-editor.org/rfc/rfc9110.html#field.content-length) header. For requests using transport encoding, this should be the compressed size.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 3495</para>
     /// </remarks>
     public const string HTTP_RESPONSE_BODY_SIZE = "http.response.body.size";
@@ -4188,11 +4655,15 @@ public static class OtelAttributes
     /// <summary>
     /// The total size of the response in bytes. This should be the total number of bytes sent over the wire, including the status line (HTTP/1.1), framing (HTTP/2 and HTTP/3), headers, and response body and trailers if any.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 1437</para>
     /// </remarks>
     public const string HTTP_RESPONSE_SIZE = "http.response.size";
     /// <summary>
     /// [HTTP response status code](https://tools.ietf.org/html/rfc7231#section-6).
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>200</description></item>
@@ -4201,12 +4672,16 @@ public static class OtelAttributes
     public const string HTTP_RESPONSE_STATUS_CODE = "http.response.status_code";
     /// <summary>
     /// Deprecated, use `http.response.header.content-length` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 3495</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `http.response.header.content-length`.\", \"reason\": \"uncategorized\"}")]
     public const string HTTP_RESPONSE_CONTENT_LENGTH = "http.response_content_length";
     /// <summary>
     /// Deprecated, use `http.response.body.size` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 5493</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `http.response.body.size`.\", \"reason\": \"renamed\", \"renamed_to\": \"http.response.body.size\"}")]
@@ -4226,6 +4701,8 @@ public static class OtelAttributes
     public const string HTTP_ROUTE = "http.route";
     /// <summary>
     /// Deprecated, use `url.scheme` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>http</description></item>
@@ -4236,6 +4713,8 @@ public static class OtelAttributes
     public const string HTTP_SCHEME = "http.scheme";
     /// <summary>
     /// Deprecated, use `server.address` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>example.com</description></item>
@@ -4245,6 +4724,8 @@ public static class OtelAttributes
     public const string HTTP_SERVER_NAME = "http.server_name";
     /// <summary>
     /// Deprecated, use `http.response.status_code` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>200</description></item>
@@ -4254,6 +4735,8 @@ public static class OtelAttributes
     public const string HTTP_STATUS_CODE = "http.status_code";
     /// <summary>
     /// Deprecated, use `url.path` and `url.query` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>/search?q=OpenTelemetry#SemConv</description></item>
@@ -4263,6 +4746,8 @@ public static class OtelAttributes
     public const string HTTP_TARGET = "http.target";
     /// <summary>
     /// Deprecated, use `url.full` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>https://www.foo.bar/search?q=OpenTelemetry#SemConv</description></item>
@@ -4272,6 +4757,8 @@ public static class OtelAttributes
     public const string HTTP_URL = "http.url";
     /// <summary>
     /// Deprecated, use `user_agent.original` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>CERN-LineMode/2.15 libwww/2.17b3</description></item>
@@ -4285,6 +4772,8 @@ public static class OtelAttributes
     /// <summary>
     /// Design capacity in Watts-hours or Amper-hours
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>9.3Ah</description></item>
@@ -4295,6 +4784,8 @@ public static class OtelAttributes
     /// <summary>
     /// Battery [chemistry](https://schemas.dmtf.org/wbem/cim-html/2.31.0/CIM_Battery.html), e.g. Lithium-Ion, Nickel-Cadmium, etc.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Li-ion</description></item>
@@ -4305,14 +4796,13 @@ public static class OtelAttributes
     /// <summary>
     /// The current state of the battery
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string HW_BATTERY_STATE = "hw.battery.state";
     /// <summary>
     /// BIOS version of the hardware component
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1.2.3</description></item>
@@ -4322,6 +4812,8 @@ public static class OtelAttributes
     /// <summary>
     /// Driver version for the hardware component
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>10.2.1-3</description></item>
@@ -4331,6 +4823,8 @@ public static class OtelAttributes
     /// <summary>
     /// Type of the enclosure (useful for modular systems)
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Computer</description></item>
@@ -4342,6 +4836,8 @@ public static class OtelAttributes
     /// <summary>
     /// Firmware version of the hardware component
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>2.0.1</description></item>
@@ -4351,14 +4847,13 @@ public static class OtelAttributes
     /// <summary>
     /// Type of task the GPU is performing
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string HW_GPU_TASK = "hw.gpu.task";
     /// <summary>
     /// An identifier for the hardware component, unique within the monitored host
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>win32battery_battery_testsysa33_1</description></item>
@@ -4368,14 +4863,13 @@ public static class OtelAttributes
     /// <summary>
     /// Type of limit for hardware components
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string HW_LIMIT_TYPE = "hw.limit_type";
     /// <summary>
     /// RAID Level of the logical disk
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>RAID0+1</description></item>
@@ -4387,14 +4881,13 @@ public static class OtelAttributes
     /// <summary>
     /// State of the logical disk space usage
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string HW_LOGICAL_DISK_STATE = "hw.logical_disk.state";
     /// <summary>
     /// Type of the memory module
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>DDR4</description></item>
@@ -4406,6 +4899,8 @@ public static class OtelAttributes
     /// <summary>
     /// Descriptive model name of the hardware component
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>PERC H740P</description></item>
@@ -4417,6 +4912,8 @@ public static class OtelAttributes
     /// <summary>
     /// An easily-recognizable name for the hardware component
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>eth0</description></item>
@@ -4426,6 +4923,8 @@ public static class OtelAttributes
     /// <summary>
     /// Logical addresses of the adapter (e.g. IP address, or WWPN)
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["172.16.8.21", "57.11.193.42"]</description></item>
@@ -4435,6 +4934,8 @@ public static class OtelAttributes
     /// <summary>
     /// Physical address of the adapter (e.g. MAC address, or WWNN)
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>00-90-F5-E9-7B-36</description></item>
@@ -4444,6 +4945,8 @@ public static class OtelAttributes
     /// <summary>
     /// Unique identifier of the parent component (typically the `hw.id` attribute of the enclosure, or disk controller)
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>dellStorage_perc_0</description></item>
@@ -4453,6 +4956,8 @@ public static class OtelAttributes
     /// <summary>
     /// [S.M.A.R.T.](https://wikipedia.org/wiki/S.M.A.R.T.) (Self-Monitoring, Analysis, and Reporting Technology) attribute of the physical disk
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Spin Retry Count</description></item>
@@ -4464,14 +4969,13 @@ public static class OtelAttributes
     /// <summary>
     /// State of the physical disk endurance utilization
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string HW_PHYSICAL_DISK_STATE = "hw.physical_disk.state";
     /// <summary>
     /// Type of the physical disk
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>HDD</description></item>
@@ -4483,6 +4987,8 @@ public static class OtelAttributes
     /// <summary>
     /// Location of the sensor
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>cpu0</description></item>
@@ -4500,6 +5006,8 @@ public static class OtelAttributes
     /// <summary>
     /// Serial number of the hardware component
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>CNFCP0123456789</description></item>
@@ -4509,17 +5017,11 @@ public static class OtelAttributes
     /// <summary>
     /// The current state of the component
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string HW_STATE = "hw.state";
     /// <summary>
     /// Type of tape drive operation
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string HW_TAPE_DRIVE_OPERATION_TYPE = "hw.tape_drive.operation_type";
     /// <summary>
@@ -4536,6 +5038,8 @@ public static class OtelAttributes
     /// <summary>
     /// Vendor name of the hardware component
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Dell</description></item>
@@ -4637,6 +5141,8 @@ public static class OtelAttributes
     public const string JVM_MEMORY_POOL_NAME = "jvm.memory.pool.name";
     /// <summary>
     /// The type of memory.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>heap</description></item>
@@ -4646,13 +5152,12 @@ public static class OtelAttributes
     public const string JVM_MEMORY_TYPE = "jvm.memory.type";
     /// <summary>
     /// Whether the thread is daemon or not.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string JVM_THREAD_DAEMON = "jvm.thread.daemon";
     /// <summary>
     /// State of the thread.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>runnable</description></item>
@@ -4665,6 +5170,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the cluster.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry-cluster</description></item>
@@ -4686,6 +5193,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the Container from Pod specification, must be unique within a Pod. Container runtime usually uses different globally unique name (`container.name`).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>redis</description></item>
@@ -4695,14 +5204,13 @@ public static class OtelAttributes
     /// <summary>
     /// Number of times the container was restarted. This attribute can be used to identify a particular container (running or stopped) within a container spec.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string K8S_CONTAINER_RESTART_COUNT = "k8s.container.restart_count";
     /// <summary>
     /// Last terminated reason of the Container.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Evicted</description></item>
@@ -4713,6 +5221,8 @@ public static class OtelAttributes
     /// <summary>
     /// The reason for the container state. Corresponds to the `reason` field of the: [K8s ContainerStateWaiting](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#containerstatewaiting-v1-core) or [K8s ContainerStateTerminated](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#containerstateterminated-v1-core)
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>ContainerCreating</description></item>
@@ -4730,6 +5240,8 @@ public static class OtelAttributes
     /// <summary>
     /// The state of the container. [K8s ContainerState](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#containerstate-v1-core)
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>terminated</description></item>
@@ -4767,6 +5279,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the CronJob.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry</description></item>
@@ -4776,6 +5290,8 @@ public static class OtelAttributes
     /// <summary>
     /// The UID of the CronJob.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>275ecb36-5aa8-4c2a-9c47-d8bb681b9aff</description></item>
@@ -4811,6 +5327,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the DaemonSet.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry</description></item>
@@ -4820,6 +5338,8 @@ public static class OtelAttributes
     /// <summary>
     /// The UID of the DaemonSet.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>275ecb36-5aa8-4c2a-9c47-d8bb681b9aff</description></item>
@@ -4855,6 +5375,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the Deployment.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry</description></item>
@@ -4864,6 +5386,8 @@ public static class OtelAttributes
     /// <summary>
     /// The UID of the Deployment.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>275ecb36-5aa8-4c2a-9c47-d8bb681b9aff</description></item>
@@ -4886,6 +5410,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the horizontal pod autoscaler.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry</description></item>
@@ -4934,6 +5460,8 @@ public static class OtelAttributes
     /// <summary>
     /// The UID of the horizontal pod autoscaler.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>275ecb36-5aa8-4c2a-9c47-d8bb681b9aff</description></item>
@@ -4943,6 +5471,8 @@ public static class OtelAttributes
     /// <summary>
     /// The size (identifier) of the K8s huge page.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>2Mi</description></item>
@@ -4978,6 +5508,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the Job.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry</description></item>
@@ -4987,6 +5519,8 @@ public static class OtelAttributes
     /// <summary>
     /// The UID of the Job.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>275ecb36-5aa8-4c2a-9c47-d8bb681b9aff</description></item>
@@ -5022,6 +5556,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the namespace that the pod is running in.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>default</description></item>
@@ -5097,6 +5633,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the Node.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>node-1</description></item>
@@ -5106,6 +5644,8 @@ public static class OtelAttributes
     /// <summary>
     /// The UID of the Node.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1eb3a0c6-0477-4080-a9cb-0cb7db65c6a2</description></item>
@@ -5142,6 +5682,8 @@ public static class OtelAttributes
     public const string K8S_POD_LABEL = "k8s.pod.label";
     /// <summary>
     /// Deprecated, use `k8s.pod.label` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>my-app</description></item>
@@ -5152,6 +5694,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the Pod.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry-pod-autoconf</description></item>
@@ -5161,6 +5705,8 @@ public static class OtelAttributes
     /// <summary>
     /// The phase for the pod. Corresponds to the `phase` field of the: [K8s PodStatus](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.33/#podstatus-v1-core)
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Pending</description></item>
@@ -5171,6 +5717,8 @@ public static class OtelAttributes
     /// <summary>
     /// The reason for the pod state. Corresponds to the `reason` field of the: [K8s PodStatus](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.33/#podstatus-v1-core)
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Evicted</description></item>
@@ -5181,6 +5729,8 @@ public static class OtelAttributes
     /// <summary>
     /// The UID of the Pod.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>275ecb36-5aa8-4c2a-9c47-d8bb681b9aff</description></item>
@@ -5216,6 +5766,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the ReplicaSet.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry</description></item>
@@ -5225,6 +5777,8 @@ public static class OtelAttributes
     /// <summary>
     /// The UID of the ReplicaSet.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>275ecb36-5aa8-4c2a-9c47-d8bb681b9aff</description></item>
@@ -5234,6 +5788,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the replication controller.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry</description></item>
@@ -5243,6 +5799,8 @@ public static class OtelAttributes
     /// <summary>
     /// The UID of the replication controller.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>275ecb36-5aa8-4c2a-9c47-d8bb681b9aff</description></item>
@@ -5252,6 +5810,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the resource quota.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry</description></item>
@@ -5273,6 +5833,8 @@ public static class OtelAttributes
     /// <summary>
     /// The UID of the resource quota.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>275ecb36-5aa8-4c2a-9c47-d8bb681b9aff</description></item>
@@ -5308,6 +5870,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the StatefulSet.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry</description></item>
@@ -5317,6 +5881,8 @@ public static class OtelAttributes
     /// <summary>
     /// The UID of the StatefulSet.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>275ecb36-5aa8-4c2a-9c47-d8bb681b9aff</description></item>
@@ -5326,6 +5892,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of K8s [StorageClass](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.30/#storageclass-v1-storage-k8s-io) object.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>gold.storageclass.storage.k8s.io</description></item>
@@ -5335,6 +5903,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the K8s volume.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>volume0</description></item>
@@ -5344,6 +5914,8 @@ public static class OtelAttributes
     /// <summary>
     /// The type of the K8s volume.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>emptyDir</description></item>
@@ -5354,313 +5926,9 @@ public static class OtelAttributes
     #endregion
     #region  Attributes
     /// <summary>
-    /// Indicates if an entity is already in the closed state
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
-    /// </summary>
-    public const string LEGACYLOCKER_ALREADY_CLOSED = "legacylocker.already_closed";
-    /// <summary>
-    /// Indicates if a feature is already enabled
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
-    /// </summary>
-    public const string LEGACYLOCKER_ALREADY_ENABLED = "legacylocker.already_enabled";
-    /// <summary>
-    /// Indicates if the user is authenticated
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
-    /// </summary>
-    public const string LEGACYLOCKER_AUTH_AUTHENTICATED = "legacylocker.auth.authenticated";
-    /// <summary>
-    /// External identity provider ID (e.g., Clerk User ID)
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>user_2abcdefg12345</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_AUTH_IDP_EXTERNAL_ID = "legacylocker.auth.idp.external_id";
-    /// <summary>
-    /// The size of the request body in bytes
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>1024</description></item>
-    /// <item><description>4096</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_BODY_SIZE = "legacylocker.body.size";
-    /// <summary>
-    /// The maximum allowed body size in bytes
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>5242880</description></item>
-    /// <item><description>10485760</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_BODY_SIZE_MAX = "legacylocker.body.size.max";
-    /// <summary>
-    /// Indicates if data was found in cache
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
-    /// </summary>
-    public const string LEGACYLOCKER_CACHE_HIT = "legacylocker.cache.hit";
-    /// <summary>
-    /// Correlation ID for distributed tracing
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>abc123-def456-ghi789</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_CORRELATION_ID = "legacylocker.correlation_id";
-    /// <summary>
-    /// The unique identifier of a customer
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>cust_abc123xyz</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_CUSTOMER_ID = "legacylocker.customer.id";
-    /// <summary>
-    /// The user ID who disabled an action
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>user_xyz789</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_DISABLED_BY = "legacylocker.disabled_by";
-    /// <summary>
-    /// The unique identifier of a document
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>7c9e6679-7425-40de-944b-e07fc1f90ae7</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_DOCUMENT_ID = "legacylocker.document.id";
-    /// <summary>
-    /// The unique identifier of a folder within a workspace
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>123e4567-e89b-12d3-a456-426614174000</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_FOLDER_ID = "legacylocker.folder.id";
-    /// <summary>
-    /// The unique identifier of an invitation
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>inv_abc123</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_INVITATION_ID = "legacylocker.invitation.id";
-    /// <summary>
-    /// The unique identifier of a workspace node (folder or document)
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>abc123-def456-789012</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_NODE_ID = "legacylocker.node.id";
-    /// <summary>
-    /// The parent path of a node in the workspace hierarchy
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>/documents/2024</description></item>
-    /// <item><description>/shared</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_NODE_PARENT_PATH = "legacylocker.node.parent_path";
-    /// <summary>
-    /// Indicates if a feature is not enabled
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
-    /// </summary>
-    public const string LEGACYLOCKER_NOT_ENABLED = "legacylocker.not_enabled";
-    /// <summary>
-    /// Indicates if an entity was not found
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
-    /// </summary>
-    public const string LEGACYLOCKER_NOT_FOUND = "legacylocker.not_found";
-    /// <summary>
-    /// The unique identifier of a folder-level permission
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>fperm_xyz789</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_PERMISSION_FOLDER_ID = "legacylocker.permission.folder.id";
-    /// <summary>
-    /// The unique identifier of a locker-level permission
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>perm_abc123</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_PERMISSION_LOCKER_ID = "legacylocker.permission.locker.id";
-    /// <summary>
-    /// The unique identifier of a quota
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>quota_abc123</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_QUOTA_ID = "legacylocker.quota.id";
-    /// <summary>
-    /// The user ID who requested an action
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>user_abc123</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_REQUESTED_BY = "legacylocker.requested_by";
-    /// <summary>
-    /// The number of results returned by a query
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>10</description></item>
-    /// <item><description>50</description></item>
-    /// <item><description>100</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_RESULT_COUNT = "legacylocker.result.count";
-    /// <summary>
-    /// Cron expression for a scheduled task
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>0 0 * * *</description></item>
-    /// <item><description>*/15 * * * *</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_SCHEDULE_CRON = "legacylocker.schedule.cron";
-    /// <summary>
-    /// Temporal schedule identifier
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>schedule-abc123</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_SCHEDULE_ID = "legacylocker.schedule.id";
-    /// <summary>
-    /// The S3 storage key for a document or node
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>workspaces/abc123/documents/readme.md</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_STORAGE_KEY = "legacylocker.storage.key";
-    /// <summary>
-    /// Stripe billing portal session identifier
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>bps_abc123xyz</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_STRIPE_PORTAL_ID = "legacylocker.stripe.portal.id";
-    /// <summary>
-    /// Indicates if an upload operation failed
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
-    /// </summary>
-    public const string LEGACYLOCKER_UPLOAD_FAILED = "legacylocker.upload.failed";
-    /// <summary>
-    /// The reason why an upload failed
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>PartSizeMismatch</description></item>
-    /// <item><description>NetworkError</description></item>
-    /// <item><description>InvalidETag</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_UPLOAD_FAILURE_REASON = "legacylocker.upload.failure.reason";
-    /// <summary>
-    /// The unique identifier of a multipart upload session
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>upload-550e8400-e29b-41d4</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_UPLOAD_ID = "legacylocker.upload.id";
-    /// <summary>
-    /// The ETag of the last uploaded part
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>abc123def456</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_UPLOAD_PART_ETAG_LAST = "legacylocker.upload.part.etag.last";
-    /// <summary>
-    /// The part number in a multipart upload (1-indexed)
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>1</description></item>
-    /// <item><description>2</description></item>
-    /// <item><description>15</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_UPLOAD_PART_NUMBER = "legacylocker.upload.part.number";
-    /// <summary>
-    /// The number of the last uploaded part
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>5</description></item>
-    /// <item><description>10</description></item>
-    /// <item><description>100</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_UPLOAD_PART_NUMBER_LAST = "legacylocker.upload.part.number.last";
-    /// <summary>
-    /// Actual size of an upload part in bytes
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>5242880</description></item>
-    /// <item><description>1024000</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_UPLOAD_PART_SIZE_ACTUAL = "legacylocker.upload.part.size.actual";
-    /// <summary>
-    /// Expected size of an upload part in bytes
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>5242880</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_UPLOAD_PART_SIZE_EXPECTED = "legacylocker.upload.part.size.expected";
-    /// <summary>
-    /// Comma-separated list of part numbers found in S3
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>1,2,3,4,5</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_UPLOAD_PARTS_FOUND = "legacylocker.upload.parts.found";
-    /// <summary>
-    /// The HTTP status code returned by S3 for the upload operation
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>200</description></item>
-    /// <item><description>403</description></item>
-    /// <item><description>500</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_UPLOAD_S3_STATUS = "legacylocker.upload.s3.status";
-    /// <summary>
-    /// The unique identifier of a workspace (legacy locker)
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// <item><description>550e8400-e29b-41d4-a716-446655440000</description></item>
-    /// </list>
-    /// </remarks>
-    public const string LEGACYLOCKER_WORKSPACE_ID = "legacylocker.workspace.id";
-    #endregion
-    #region  Attributes
-    /// <summary>
     /// The Linux Slab memory state
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>reclaimable</description></item>
@@ -5674,6 +5942,8 @@ public static class OtelAttributes
     /// <summary>
     /// The basename of the file.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>audit.log</description></item>
@@ -5683,6 +5953,8 @@ public static class OtelAttributes
     /// <summary>
     /// The basename of the file, with symlinks resolved.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>uuid.log</description></item>
@@ -5692,6 +5964,8 @@ public static class OtelAttributes
     /// <summary>
     /// The full path to the file.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>/var/log/mysql/audit.log</description></item>
@@ -5701,6 +5975,8 @@ public static class OtelAttributes
     /// <summary>
     /// The full path to the file, with symlinks resolved.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>/var/lib/docker/uuid.log</description></item>
@@ -5710,9 +5986,6 @@ public static class OtelAttributes
     /// <summary>
     /// The stream associated with the log. See below for a list of well-known values.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string LOG_IOSTREAM = "log.iostream";
     /// <summary>
@@ -5744,6 +6017,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// Name of the logical partition that hosts a systems with a mainframe operating system.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>LPAR01</description></item>
@@ -5754,33 +6029,21 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// Deprecated, use `rpc.message.compressed_size` instead.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `rpc.message.compressed_size`.\", \"reason\": \"renamed\", \"renamed_to\": \"rpc.message.compressed_size\"}")]
     public const string MESSAGE_COMPRESSED_SIZE = "message.compressed_size";
     /// <summary>
     /// Deprecated, use `rpc.message.id` instead.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `rpc.message.id`.\", \"reason\": \"renamed\", \"renamed_to\": \"rpc.message.id\"}")]
     public const string MESSAGE_ID = "message.id";
     /// <summary>
     /// Deprecated, use `rpc.message.type` instead.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `rpc.message.type`.\", \"reason\": \"renamed\", \"renamed_to\": \"rpc.message.type\"}")]
     public const string MESSAGE_TYPE = "message.type";
     /// <summary>
     /// Deprecated, use `rpc.message.uncompressed_size` instead.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `rpc.message.uncompressed_size`.\", \"reason\": \"renamed\", \"renamed_to\": \"rpc.message.uncompressed_size\"}")]
     public const string MESSAGE_UNCOMPRESSED_SIZE = "message.uncompressed_size";
@@ -5802,6 +6065,8 @@ public static class OtelAttributes
     /// <summary>
     /// A unique identifier for the client that consumes or produces a message.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>client-5</description></item>
@@ -5824,9 +6089,6 @@ public static class OtelAttributes
     public const string MESSAGING_CONSUMER_GROUP_NAME = "messaging.consumer.group.name";
     /// <summary>
     /// A boolean that is true if the message destination is anonymous (could be unnamed or have auto-generated name).
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string MESSAGING_DESTINATION_ANONYMOUS = "messaging.destination.anonymous";
     /// <summary>
@@ -5844,6 +6106,8 @@ public static class OtelAttributes
     /// <summary>
     /// The identifier of the partition messages are sent to or received from, unique within the `messaging.destination.name`.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 1</para>
     /// </remarks>
     public const string MESSAGING_DESTINATION_PARTITION_ID = "messaging.destination.partition.id";
@@ -5871,21 +6135,17 @@ public static class OtelAttributes
     public const string MESSAGING_DESTINATION_TEMPLATE = "messaging.destination.template";
     /// <summary>
     /// A boolean that is true if the message destination is temporary and might not exist anymore after messages are processed.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string MESSAGING_DESTINATION_TEMPORARY = "messaging.destination.temporary";
     /// <summary>
     /// Deprecated, no replacement at this time.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Removed. No replacement at this time.\", \"reason\": \"obsoleted\"}")]
     public const string MESSAGING_DESTINATION_PUBLISH_ANONYMOUS = "messaging.destination_publish.anonymous";
     /// <summary>
     /// Deprecated, no replacement at this time.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>MyQueue</description></item>
@@ -5897,6 +6157,8 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `messaging.consumer.group.name` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: $Default</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `messaging.consumer.group.name`.\", \"reason\": \"renamed\", \"renamed_to\": \"messaging.consumer.group.name\"}")]
@@ -5904,36 +6166,48 @@ public static class OtelAttributes
     /// <summary>
     /// The UTC epoch seconds at which the message has been accepted and stored in the entity.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 1701393730</para>
     /// </remarks>
     public const string MESSAGING_EVENTHUBS_MESSAGE_ENQUEUED_TIME = "messaging.eventhubs.message.enqueued_time";
     /// <summary>
     /// The ack deadline in seconds set for the modify ack deadline request.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 10</para>
     /// </remarks>
     public const string MESSAGING_GCP_PUBSUB_MESSAGE_ACK_DEADLINE = "messaging.gcp_pubsub.message.ack_deadline";
     /// <summary>
     /// The ack id for a given message.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: ack_id</para>
     /// </remarks>
     public const string MESSAGING_GCP_PUBSUB_MESSAGE_ACK_ID = "messaging.gcp_pubsub.message.ack_id";
     /// <summary>
     /// The delivery attempt for a given message.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 2</para>
     /// </remarks>
     public const string MESSAGING_GCP_PUBSUB_MESSAGE_DELIVERY_ATTEMPT = "messaging.gcp_pubsub.message.delivery_attempt";
     /// <summary>
     /// The ordering key for a given message. If the attribute is not present, the message does not have an ordering key.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: ordering_key</para>
     /// </remarks>
     public const string MESSAGING_GCP_PUBSUB_MESSAGE_ORDERING_KEY = "messaging.gcp_pubsub.message.ordering_key";
     /// <summary>
     /// Deprecated, use `messaging.consumer.group.name` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: my-group</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `messaging.consumer.group.name`.\", \"reason\": \"renamed\", \"renamed_to\": \"messaging.consumer.group.name\"}")]
@@ -5941,6 +6215,8 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `messaging.destination.partition.id` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 2</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Record string representation of the partition id in `messaging.destination.partition.id` attribute.\", \"reason\": \"uncategorized\"}")]
@@ -5957,20 +6233,21 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `messaging.kafka.offset` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 42</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `messaging.kafka.offset`.\", \"reason\": \"renamed\", \"renamed_to\": \"messaging.kafka.offset\"}")]
     public const string MESSAGING_KAFKA_MESSAGE_OFFSET = "messaging.kafka.message.offset";
     /// <summary>
     /// A boolean that is true if the message is a tombstone.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string MESSAGING_KAFKA_MESSAGE_TOMBSTONE = "messaging.kafka.message.tombstone";
     /// <summary>
     /// The offset of a record in the corresponding Kafka partition.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 42</para>
     /// </remarks>
     public const string MESSAGING_KAFKA_OFFSET = "messaging.kafka.offset";
@@ -5986,6 +6263,8 @@ public static class OtelAttributes
     /// <summary>
     /// The conversation ID identifying the conversation to which the message belongs, represented as a string. Sometimes called "Correlation ID".
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: MyConversationId</para>
     /// </remarks>
     public const string MESSAGING_MESSAGE_CONVERSATION_ID = "messaging.message.conversation_id";
@@ -6000,12 +6279,16 @@ public static class OtelAttributes
     public const string MESSAGING_MESSAGE_ENVELOPE_SIZE = "messaging.message.envelope.size";
     /// <summary>
     /// A value used by the messaging system as an identifier for the message, represented as a string.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 452a7c7c7c7048c2f887f61572b18fc2</para>
     /// </remarks>
     public const string MESSAGING_MESSAGE_ID = "messaging.message.id";
     /// <summary>
     /// Deprecated, use `messaging.operation.type` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>publish</description></item>
@@ -6018,6 +6301,8 @@ public static class OtelAttributes
     /// <summary>
     /// The system-specific name of the messaging operation.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>ack</description></item>
@@ -6040,18 +6325,24 @@ public static class OtelAttributes
     /// <summary>
     /// RabbitMQ message routing key.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: myKey</para>
     /// </remarks>
     public const string MESSAGING_RABBITMQ_DESTINATION_ROUTING_KEY = "messaging.rabbitmq.destination.routing_key";
     /// <summary>
     /// RabbitMQ message delivery tag
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 123</para>
     /// </remarks>
     public const string MESSAGING_RABBITMQ_MESSAGE_DELIVERY_TAG = "messaging.rabbitmq.message.delivery_tag";
     /// <summary>
     /// Deprecated, use `messaging.consumer.group.name` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: myConsumerGroup</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `messaging.consumer.group.name` on the consumer spans. No replacement for producer spans.\n\", \"reason\": \"uncategorized\"}")]
@@ -6059,32 +6350,37 @@ public static class OtelAttributes
     /// <summary>
     /// Model of message consumption. This only applies to consumer spans.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string MESSAGING_ROCKETMQ_CONSUMPTION_MODEL = "messaging.rocketmq.consumption_model";
     /// <summary>
     /// The delay time level for delay message, which determines the message delay time.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 3</para>
     /// </remarks>
     public const string MESSAGING_ROCKETMQ_MESSAGE_DELAY_TIME_LEVEL = "messaging.rocketmq.message.delay_time_level";
     /// <summary>
     /// The timestamp in milliseconds that the delay message is expected to be delivered to consumer.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 1665987217045</para>
     /// </remarks>
     public const string MESSAGING_ROCKETMQ_MESSAGE_DELIVERY_TIMESTAMP = "messaging.rocketmq.message.delivery_timestamp";
     /// <summary>
     /// It is essential for FIFO message. Messages that belong to the same message group are always processed one by one within the same consumer group.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: myMessageGroup</para>
     /// </remarks>
     public const string MESSAGING_ROCKETMQ_MESSAGE_GROUP = "messaging.rocketmq.message.group";
     /// <summary>
     /// Key(s) of message, another way to mark message besides message id.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["keyA", "keyB"]</description></item>
@@ -6094,26 +6390,29 @@ public static class OtelAttributes
     /// <summary>
     /// The secondary classifier of message besides topic.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: tagA</para>
     /// </remarks>
     public const string MESSAGING_ROCKETMQ_MESSAGE_TAG = "messaging.rocketmq.message.tag";
     /// <summary>
     /// Type of message.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string MESSAGING_ROCKETMQ_MESSAGE_TYPE = "messaging.rocketmq.message.type";
     /// <summary>
     /// Namespace of RocketMQ resources, resources in different namespaces are individual.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: myNamespace</para>
     /// </remarks>
     public const string MESSAGING_ROCKETMQ_NAMESPACE = "messaging.rocketmq.namespace";
     /// <summary>
     /// Deprecated, use `messaging.destination.subscription.name` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: subscription-a</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `messaging.destination.subscription.name`.\", \"reason\": \"renamed\", \"renamed_to\": \"messaging.destination.subscription.name\"}")]
@@ -6121,20 +6420,21 @@ public static class OtelAttributes
     /// <summary>
     /// Describes the [settlement type](https://learn.microsoft.com/azure/service-bus-messaging/message-transfers-locks-settlement#peeklock).
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string MESSAGING_SERVICEBUS_DISPOSITION_STATUS = "messaging.servicebus.disposition_status";
     /// <summary>
     /// Number of deliveries that have been attempted for this message.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 2</para>
     /// </remarks>
     public const string MESSAGING_SERVICEBUS_MESSAGE_DELIVERY_COUNT = "messaging.servicebus.message.delivery_count";
     /// <summary>
     /// The UTC epoch seconds at which the message has been accepted and stored in the entity.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 1701393730</para>
     /// </remarks>
     public const string MESSAGING_SERVICEBUS_MESSAGE_ENQUEUED_TIME = "messaging.servicebus.message.enqueued_time";
@@ -6152,6 +6452,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// The number of entries in an activity log
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>10</description></item>
@@ -6162,6 +6464,8 @@ public static class OtelAttributes
     public const string MYAPP_ACTIVITY_LOG_ENTRY_COUNT = "myapp.activity_log.entry.count";
     /// <summary>
     /// Another identifier that is experimental for demonstration
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>log-550e8400-e29b-41d4-a716</description></item>
@@ -6170,6 +6474,8 @@ public static class OtelAttributes
     public const string MYAPP_ACTIVITY_LOG_EXPERIMENTAL_ID = "myapp.activity_log.experimental_id";
     /// <summary>
     /// The unique identifier of an activity log
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>log-550e8400-e29b-41d4-a716</description></item>
@@ -6180,12 +6486,16 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// Deprecated, use `network.local.address`.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 192.168.0.1</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `network.local.address`.\", \"reason\": \"renamed\", \"renamed_to\": \"network.local.address\"}")]
     public const string NET_HOST_IP = "net.host.ip";
     /// <summary>
     /// Deprecated, use `server.address`.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>example.com</description></item>
@@ -6195,6 +6505,8 @@ public static class OtelAttributes
     public const string NET_HOST_NAME = "net.host.name";
     /// <summary>
     /// Deprecated, use `server.port`.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>8080</description></item>
@@ -6204,12 +6516,16 @@ public static class OtelAttributes
     public const string NET_HOST_PORT = "net.host.port";
     /// <summary>
     /// Deprecated, use `network.peer.address`.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 127.0.0.1</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `network.peer.address`.\", \"reason\": \"renamed\", \"renamed_to\": \"network.peer.address\"}")]
     public const string NET_PEER_IP = "net.peer.ip";
     /// <summary>
     /// Deprecated, use `server.address` on client spans and `client.address` on server spans.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>example.com</description></item>
@@ -6219,6 +6535,8 @@ public static class OtelAttributes
     public const string NET_PEER_NAME = "net.peer.name";
     /// <summary>
     /// Deprecated, use `server.port` on client spans and `client.port` on server spans.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>8080</description></item>
@@ -6228,6 +6546,8 @@ public static class OtelAttributes
     public const string NET_PEER_PORT = "net.peer.port";
     /// <summary>
     /// Deprecated, use `network.protocol.name`.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>amqp</description></item>
@@ -6239,20 +6559,21 @@ public static class OtelAttributes
     public const string NET_PROTOCOL_NAME = "net.protocol.name";
     /// <summary>
     /// Deprecated, use `network.protocol.version`.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 3.1.1</para>
     /// </remarks>
     [Obsolete("{\"note\": \"Replaced by `network.protocol.version`.\", \"reason\": \"renamed\", \"renamed_to\": \"network.protocol.version\"}")]
     public const string NET_PROTOCOL_VERSION = "net.protocol.version";
     /// <summary>
     /// Deprecated, use `network.transport` and `network.type`.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Split to `network.transport` and `network.type`.\", \"reason\": \"uncategorized\"}")]
     public const string NET_SOCK_FAMILY = "net.sock.family";
     /// <summary>
     /// Deprecated, use `network.local.address`.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>/var/my.sock</description></item>
@@ -6262,6 +6583,8 @@ public static class OtelAttributes
     public const string NET_SOCK_HOST_ADDR = "net.sock.host.addr";
     /// <summary>
     /// Deprecated, use `network.local.port`.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>8080</description></item>
@@ -6271,6 +6594,8 @@ public static class OtelAttributes
     public const string NET_SOCK_HOST_PORT = "net.sock.host.port";
     /// <summary>
     /// Deprecated, use `network.peer.address`.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>192.168.0.1</description></item>
@@ -6280,6 +6605,8 @@ public static class OtelAttributes
     public const string NET_SOCK_PEER_ADDR = "net.sock.peer.addr";
     /// <summary>
     /// Deprecated, no replacement at this time.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>/var/my.sock</description></item>
@@ -6289,6 +6616,8 @@ public static class OtelAttributes
     public const string NET_SOCK_PEER_NAME = "net.sock.peer.name";
     /// <summary>
     /// Deprecated, use `network.peer.port`.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>65531</description></item>
@@ -6298,9 +6627,6 @@ public static class OtelAttributes
     public const string NET_SOCK_PEER_PORT = "net.sock.peer.port";
     /// <summary>
     /// Deprecated, use `network.transport`.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `network.transport`.\", \"reason\": \"renamed\", \"renamed_to\": \"network.transport\"}")]
     public const string NET_TRANSPORT = "net.transport";
@@ -6308,21 +6634,29 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// The ISO 3166-1 alpha-2 2-character country code associated with the mobile carrier network.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: DE</para>
     /// </remarks>
     public const string NETWORK_CARRIER_ICC = "network.carrier.icc";
     /// <summary>
     /// The mobile carrier country code.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 310</para>
     /// </remarks>
     public const string NETWORK_CARRIER_MCC = "network.carrier.mcc";
     /// <summary>
     /// The mobile carrier network code.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 001</para>
     /// </remarks>
     public const string NETWORK_CARRIER_MNC = "network.carrier.mnc";
     /// <summary>
     /// The name of the mobile carrier.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: sprint</para>
     /// </remarks>
     public const string NETWORK_CARRIER_NAME = "network.carrier.name";
@@ -6339,16 +6673,22 @@ public static class OtelAttributes
     public const string NETWORK_CONNECTION_STATE = "network.connection.state";
     /// <summary>
     /// This describes more details regarding the connection.type. It may be the type of cell technology connection, but it could be used for describing details about a wifi connection.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: LTE</para>
     /// </remarks>
     public const string NETWORK_CONNECTION_SUBTYPE = "network.connection.subtype";
     /// <summary>
     /// The internet connection type.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: wifi</para>
     /// </remarks>
     public const string NETWORK_CONNECTION_TYPE = "network.connection.type";
     /// <summary>
     /// The network interface name.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>lo</description></item>
@@ -6358,6 +6698,8 @@ public static class OtelAttributes
     public const string NETWORK_INTERFACE_NAME = "network.interface.name";
     /// <summary>
     /// The network IO operation direction.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>transmit</description></item>
@@ -6366,6 +6708,8 @@ public static class OtelAttributes
     public const string NETWORK_IO_DIRECTION = "network.io.direction";
     /// <summary>
     /// Local address of the network connection - IP address or Unix domain socket name.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>10.1.2.80</description></item>
@@ -6375,6 +6719,8 @@ public static class OtelAttributes
     public const string NETWORK_LOCAL_ADDRESS = "network.local.address";
     /// <summary>
     /// Local port number of the network connection.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>65123</description></item>
@@ -6383,6 +6729,8 @@ public static class OtelAttributes
     public const string NETWORK_LOCAL_PORT = "network.local.port";
     /// <summary>
     /// Peer address of the network connection - IP address or Unix domain socket name.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>10.1.2.80</description></item>
@@ -6392,6 +6740,8 @@ public static class OtelAttributes
     public const string NETWORK_PEER_ADDRESS = "network.peer.address";
     /// <summary>
     /// Peer port number of the network connection.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>65123</description></item>
@@ -6452,6 +6802,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// NFSv4+ operation name.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>OPEN</description></item>
@@ -6463,6 +6815,8 @@ public static class OtelAttributes
     /// <summary>
     /// Linux: one of "hit" (NFSD_STATS_RC_HITS), "miss" (NFSD_STATS_RC_MISSES), or "nocache" (NFSD_STATS_RC_NOCACHE -- uncacheable)
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: hit</para>
     /// </remarks>
     public const string NFS_SERVER_REPCACHE_STATUS = "nfs.server.repcache.status";
@@ -6470,9 +6824,6 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// The state of event loop time.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string NODEJS_EVENTLOOP_STATE = "nodejs.eventloop.state";
     #endregion
@@ -6493,6 +6844,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// ONC/Sun RPC procedure name.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>OPEN</description></item>
@@ -6503,13 +6856,12 @@ public static class OtelAttributes
     public const string ONC_RPC_PROCEDURE_NAME = "onc_rpc.procedure.name";
     /// <summary>
     /// ONC/Sun RPC procedure number.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string ONC_RPC_PROCEDURE_NUMBER = "onc_rpc.procedure.number";
     /// <summary>
     /// ONC/Sun RPC program name.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>portmapper</description></item>
@@ -6519,15 +6871,14 @@ public static class OtelAttributes
     public const string ONC_RPC_PROGRAM_NAME = "onc_rpc.program.name";
     /// <summary>
     /// ONC/Sun RPC program version.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string ONC_RPC_VERSION = "onc_rpc.version";
     #endregion
     #region  Attributes
     /// <summary>
     /// The service tier requested. May be a specific tier, default, or auto.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>auto</description></item>
@@ -6537,6 +6888,8 @@ public static class OtelAttributes
     public const string OPENAI_REQUEST_SERVICE_TIER = "openai.request.service_tier";
     /// <summary>
     /// The service tier used for the response.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>scale</description></item>
@@ -6546,6 +6899,8 @@ public static class OtelAttributes
     public const string OPENAI_RESPONSE_SERVICE_TIER = "openai.response.service_tier";
     /// <summary>
     /// A fingerprint to track any eventual change in the Generative AI environment.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>fp_44709d6fcb</description></item>
@@ -6557,6 +6912,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the cluster quota.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry</description></item>
@@ -6566,6 +6923,8 @@ public static class OtelAttributes
     /// <summary>
     /// The UID of the cluster quota.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>275ecb36-5aa8-4c2a-9c47-d8bb681b9aff</description></item>
@@ -6588,6 +6947,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// Unique identifier for a particular build or compilation of the operating system.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>TQ3C.230805.001.B2</description></item>
@@ -6599,6 +6960,8 @@ public static class OtelAttributes
     /// <summary>
     /// Human readable (not intended to be parsed) OS version information, like e.g. reported by `ver` or `lsb_release -a` commands.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Microsoft Windows [Version 10.0.18363.778]</description></item>
@@ -6608,6 +6971,8 @@ public static class OtelAttributes
     public const string OS_DESCRIPTION = "os.description";
     /// <summary>
     /// Human readable operating system name.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>iOS</description></item>
@@ -6619,14 +6984,13 @@ public static class OtelAttributes
     /// <summary>
     /// The operating system type.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string OS_TYPE = "os.type";
     /// <summary>
     /// The version string of the operating system as defined in [Version Attributes](/docs/resource/README.md#version-attributes).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>14.2.1</description></item>
@@ -6677,6 +7041,8 @@ public static class OtelAttributes
     public const string OTEL_EVENT_NAME = "otel.event.name";
     /// <summary>
     /// Deprecated. Use the `otel.scope.name` attribute
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>io.opentelemetry.contrib.mongodb</description></item>
@@ -6686,6 +7052,8 @@ public static class OtelAttributes
     public const string OTEL_LIBRARY_NAME = "otel.library.name";
     /// <summary>
     /// Deprecated. Use the `otel.scope.version` attribute.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1.0.0</description></item>
@@ -6695,6 +7063,8 @@ public static class OtelAttributes
     public const string OTEL_LIBRARY_VERSION = "otel.library.version";
     /// <summary>
     /// The name of the instrumentation scope - (`InstrumentationScope.Name` in OTLP).
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>io.opentelemetry.contrib.mongodb</description></item>
@@ -6703,6 +7073,8 @@ public static class OtelAttributes
     public const string OTEL_SCOPE_NAME = "otel.scope.name";
     /// <summary>
     /// The schema URL of the instrumentation scope.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>https://opentelemetry.io/schemas/1.31.0</description></item>
@@ -6711,6 +7083,8 @@ public static class OtelAttributes
     public const string OTEL_SCOPE_SCHEMA_URL = "otel.scope.schema_url";
     /// <summary>
     /// The version of the instrumentation scope - (`InstrumentationScope.Version` in OTLP).
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1.0.0</description></item>
@@ -6719,27 +7093,20 @@ public static class OtelAttributes
     public const string OTEL_SCOPE_VERSION = "otel.scope.version";
     /// <summary>
     /// Determines whether the span has a parent span, and if so, [whether it is a remote parent](https://opentelemetry.io/docs/specs/otel/trace/api/#isremote)
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string OTEL_SPAN_PARENT_ORIGIN = "otel.span.parent.origin";
     /// <summary>
     /// The result value of the sampler for this span
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string OTEL_SPAN_SAMPLING_RESULT = "otel.span.sampling_result";
     /// <summary>
     /// Name of the code, either "OK" or "ERROR". MUST NOT be set if the status code is UNSET.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string OTEL_STATUS_CODE = "otel.status_code";
     /// <summary>
     /// Description of the Status if it has a value, otherwise not set.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>resource not found</description></item>
@@ -6750,6 +7117,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// Deprecated, use `db.client.connection.state` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>idle</description></item>
@@ -6772,6 +7141,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// Deprecated, use `db.client.connection.pool.name` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>myDataSource</description></item>
@@ -6784,46 +7155,33 @@ public static class OtelAttributes
     /// <summary>
     /// Provides an indication that multiple symbols map to this location's address, for example due to identical code folding by the linker. In that case the line information represents one of the multiple symbols. This field must be recomputed when the symbolization state of the profile changes.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string PPROF_LOCATION_IS_FOLDED = "pprof.location.is_folded";
     /// <summary>
     /// Indicates that there are filenames related to this mapping.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string PPROF_MAPPING_HAS_FILENAMES = "pprof.mapping.has_filenames";
     /// <summary>
     /// Indicates that there are functions related to this mapping.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string PPROF_MAPPING_HAS_FUNCTIONS = "pprof.mapping.has_functions";
     /// <summary>
     /// Indicates that there are inline frames related to this mapping.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string PPROF_MAPPING_HAS_INLINE_FRAMES = "pprof.mapping.has_inline_frames";
     /// <summary>
     /// Indicates that there are line numbers related to this mapping.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string PPROF_MAPPING_HAS_LINE_NUMBERS = "pprof.mapping.has_line_numbers";
     /// <summary>
     /// Free-form text associated with the profile. This field should not be used to store any machine-readable information, it is only for human-friendly content.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["hello world", "bazinga"]</description></item>
@@ -6847,6 +7205,8 @@ public static class OtelAttributes
     /// <summary>
     /// The command used to launch the process (i.e. the command name). On Linux based systems, can be set to the zeroth string in `proc/[pid]/cmdline`. On Windows, can be set to the first parameter extracted from `GetCommandLineW`.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>cmd/otelcol</description></item>
@@ -6856,6 +7216,8 @@ public static class OtelAttributes
     /// <summary>
     /// All the command arguments (including the command/executable itself) as received by the process. On Linux-based systems (and some other Unixoid systems supporting procfs), can be set according to the list of null-delimited strings extracted from `proc/[pid]/cmdline`. For libc-based executables, this would be the full argv vector passed to `main`. SHOULD NOT be collected by default unless there is sanitization that excludes sensitive data.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["cmd/otecol", "--config=config.yaml"]</description></item>
@@ -6865,6 +7227,8 @@ public static class OtelAttributes
     /// <summary>
     /// The full command used to launch the process as a single string representing the full command. On Windows, can be set to the result of `GetCommandLineW`. Do not set this if you have to assemble it just for monitoring; use `process.command_args` instead. SHOULD NOT be collected by default unless there is sanitization that excludes sensitive data.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>C:\cmd\otecol --config="my directory\config.yaml"</description></item>
@@ -6873,22 +7237,18 @@ public static class OtelAttributes
     public const string PROCESS_COMMAND_LINE = "process.command_line";
     /// <summary>
     /// Specifies whether the context switches for this data point were voluntary or involuntary.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string PROCESS_CONTEXT_SWITCH_TYPE = "process.context_switch.type";
     /// <summary>
     /// Deprecated, use `cpu.mode` instead.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `cpu.mode`.\", \"reason\": \"renamed\", \"renamed_to\": \"cpu.mode\"}")]
     public const string PROCESS_CPU_STATE = "process.cpu.state";
     /// <summary>
     /// The date and time the process was created, in ISO 8601 format.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>2023-11-21T09:25:34.853Z</description></item>
@@ -6911,6 +7271,8 @@ public static class OtelAttributes
     /// <summary>
     /// The GNU build ID as found in the `.note.gnu.build-id` ELF section (hex string).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>c89b11207f6479603b0d49bf291c092c2b719293</description></item>
@@ -6920,6 +7282,8 @@ public static class OtelAttributes
     /// <summary>
     /// The Go build ID as retrieved by `go tool buildid <go executable>`.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>foh3mEXu7BLZjsN9pOwG/kATcXlYVCDEFouRMQed_/WwRFB1hPo9LBkekthSPG/x8hMC8emW2cCjXD0_1aY</description></item>
@@ -6929,6 +7293,8 @@ public static class OtelAttributes
     /// <summary>
     /// Profiling specific build ID for executables. See the OTel specification for Profiles for more information.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>600DCAFE4A110000F2BF38C493F5FB92</description></item>
@@ -6938,6 +7304,8 @@ public static class OtelAttributes
     /// <summary>
     /// "Deprecated, use `process.executable.build_id.htlhash` instead."
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>600DCAFE4A110000F2BF38C493F5FB92</description></item>
@@ -6948,6 +7316,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the process executable. On Linux based systems, this SHOULD be set to the base name of the target of `/proc/[pid]/exe`. On Windows, this SHOULD be set to the base name of `GetProcessImageFileNameW`.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>otelcol</description></item>
@@ -6957,6 +7327,8 @@ public static class OtelAttributes
     /// <summary>
     /// The full path to the process executable. On Linux based systems, can be set to the target of `proc/[pid]/exe`. On Windows, can be set to the result of `GetProcessImageFileNameW`.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>/usr/bin/cmd/otelcol</description></item>
@@ -6966,6 +7338,8 @@ public static class OtelAttributes
     /// <summary>
     /// The exit code of the process.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>127</description></item>
@@ -6975,6 +7349,8 @@ public static class OtelAttributes
     /// <summary>
     /// The date and time the process exited, in ISO 8601 format.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>2023-11-21T09:26:12.315Z</description></item>
@@ -6984,6 +7360,8 @@ public static class OtelAttributes
     /// <summary>
     /// The PID of the process's group leader. This is also the process group ID (PGID) of the process.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>23</description></item>
@@ -6993,9 +7371,6 @@ public static class OtelAttributes
     /// <summary>
     /// Whether the process is connected to an interactive shell.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string PROCESS_INTERACTIVE = "process.interactive";
     /// <summary>
@@ -7013,6 +7388,8 @@ public static class OtelAttributes
     /// <summary>
     /// The username of the user that owns the process.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>root</description></item>
@@ -7021,15 +7398,14 @@ public static class OtelAttributes
     public const string PROCESS_OWNER = "process.owner";
     /// <summary>
     /// Deprecated, use `system.paging.fault.type` instead.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     [Obsolete("{\"note\": \"Replaced by `system.paging.fault.type`.\", \"reason\": \"renamed\", \"renamed_to\": \"system.paging.fault.type\"}")]
     public const string PROCESS_PAGING_FAULT_TYPE = "process.paging.fault_type";
     /// <summary>
     /// Parent Process identifier (PPID).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>111</description></item>
@@ -7039,6 +7415,8 @@ public static class OtelAttributes
     /// <summary>
     /// Process identifier (PID).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1234</description></item>
@@ -7048,6 +7426,8 @@ public static class OtelAttributes
     /// <summary>
     /// The real user ID (RUID) of the process.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1000</description></item>
@@ -7057,6 +7437,8 @@ public static class OtelAttributes
     /// <summary>
     /// The username of the real user of the process.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>operator</description></item>
@@ -7066,12 +7448,16 @@ public static class OtelAttributes
     /// <summary>
     /// An additional description about the runtime of the process, for example a specific vendor customization of the runtime environment.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: Eclipse OpenJ9 Eclipse OpenJ9 VM openj9-0.21.0</para>
     /// </remarks>
     public const string PROCESS_RUNTIME_DESCRIPTION = "process.runtime.description";
     /// <summary>
     /// The name of the runtime of this process.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>OpenJDK Runtime Environment</description></item>
@@ -7081,12 +7467,16 @@ public static class OtelAttributes
     /// <summary>
     /// The version of the runtime of this process, as returned by the runtime without modification.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 14.0.2</para>
     /// </remarks>
     public const string PROCESS_RUNTIME_VERSION = "process.runtime.version";
     /// <summary>
     /// The saved user ID (SUID) of the process.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1002</description></item>
@@ -7096,6 +7486,8 @@ public static class OtelAttributes
     /// <summary>
     /// The username of the saved user.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>operator</description></item>
@@ -7105,6 +7497,8 @@ public static class OtelAttributes
     /// <summary>
     /// The PID of the process's session leader. This is also the session ID (SID) of the process.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>14</description></item>
@@ -7114,6 +7508,8 @@ public static class OtelAttributes
     /// <summary>
     /// The process state, e.g., [Linux Process State Codes](https://man7.org/linux/man-pages/man1/ps.1.html#PROCESS_STATE_CODES)
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>running</description></item>
@@ -7137,6 +7533,8 @@ public static class OtelAttributes
     /// <summary>
     /// The effective user ID (EUID) of the process.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1001</description></item>
@@ -7146,6 +7544,8 @@ public static class OtelAttributes
     /// <summary>
     /// The username of the effective user of the process.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>root</description></item>
@@ -7167,6 +7567,8 @@ public static class OtelAttributes
     /// <summary>
     /// The working directory of the process.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>/root</description></item>
@@ -7178,6 +7580,8 @@ public static class OtelAttributes
     /// <summary>
     /// Describes the interpreter or compiler of a single frame.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>cpython</description></item>
@@ -7188,9 +7592,6 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// The [error codes](https://connectrpc.com//docs/protocol/#error-codes) of the Connect request. Error codes are always string values.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string RPC_CONNECT_RPC_ERROR_CODE = "rpc.connect_rpc.error_code";
     /// <summary>
@@ -7243,13 +7644,12 @@ public static class OtelAttributes
     public const string RPC_GRPC_RESPONSE_METADATA = "rpc.grpc.response.metadata";
     /// <summary>
     /// The [numeric status code](https://github.com/grpc/grpc/blob/v1.33.2/doc/statuscodes.md) of the gRPC request.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string RPC_GRPC_STATUS_CODE = "rpc.grpc.status_code";
     /// <summary>
     /// `error.code` property of response if it is an error response.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>-32700</description></item>
@@ -7259,6 +7659,8 @@ public static class OtelAttributes
     public const string RPC_JSONRPC_ERROR_CODE = "rpc.jsonrpc.error_code";
     /// <summary>
     /// `error.message` property of response if it is an error response.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Parse error</description></item>
@@ -7269,6 +7671,8 @@ public static class OtelAttributes
     /// <summary>
     /// `id` property of request or response. Since protocol allows id to be int, string, `null` or missing (for notifications), value is expected to be cast to string for simplicity. Use empty string in case of `null` value. Omit entirely if this is a notification.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>10</description></item>
@@ -7279,6 +7683,8 @@ public static class OtelAttributes
     public const string RPC_JSONRPC_REQUEST_ID = "rpc.jsonrpc.request_id";
     /// <summary>
     /// Protocol version as in `jsonrpc` property of request/response. Since JSON-RPC 1.0 doesn't specify this, the value can be omitted.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>2.0</description></item>
@@ -7288,9 +7694,6 @@ public static class OtelAttributes
     public const string RPC_JSONRPC_VERSION = "rpc.jsonrpc.version";
     /// <summary>
     /// Compressed size of the message in bytes.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string RPC_MESSAGE_COMPRESSED_SIZE = "rpc.message.compressed_size";
     /// <summary>
@@ -7305,33 +7708,28 @@ public static class OtelAttributes
     public const string RPC_MESSAGE_ID = "rpc.message.id";
     /// <summary>
     /// Whether this is a received or sent message.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string RPC_MESSAGE_TYPE = "rpc.message.type";
     /// <summary>
     /// Uncompressed size of the message in bytes.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string RPC_MESSAGE_UNCOMPRESSED_SIZE = "rpc.message.uncompressed_size";
     /// <summary>
     /// This is the logical name of the method from the RPC interface perspective.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: exampleMethod</para>
     /// </remarks>
     public const string RPC_METHOD = "rpc.method";
     /// <summary>
     /// The full (logical) name of the service being called, including its package name, if applicable.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: myservice.EchoService</para>
     /// </remarks>
     public const string RPC_SERVICE = "rpc.service";
     /// <summary>
     /// A string identifying the remoting system. See below for a list of well-known identifiers.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string RPC_SYSTEM = "rpc.system";
     #endregion
@@ -7339,6 +7737,8 @@ public static class OtelAttributes
     /// <summary>
     /// A categorization value keyword used by the entity using the rule for detection of this event
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Attempted Information Leak</description></item>
@@ -7348,6 +7748,8 @@ public static class OtelAttributes
     /// <summary>
     /// The description of the rule generating the event.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Block requests to public DNS over HTTPS / TLS protocols</description></item>
@@ -7357,6 +7759,8 @@ public static class OtelAttributes
     /// <summary>
     /// Name of the license under which the rule used to generate this event is made available.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Apache 2.0</description></item>
@@ -7366,6 +7770,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the rule or signature generating the event.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>BLOCK_DNS_over_TLS</description></item>
@@ -7387,6 +7793,8 @@ public static class OtelAttributes
     /// <summary>
     /// Name of the ruleset, policy, group, or parent category in which the rule used to generate this event is a member.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Standard_Protocol_Filters</description></item>
@@ -7396,6 +7804,8 @@ public static class OtelAttributes
     /// <summary>
     /// A rule ID that is unique within the scope of a set or group of agents, observers, or other entities using the rule for detection of this event.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>550e8400-e29b-41d4-a716-446655440000</description></item>
@@ -7406,6 +7816,8 @@ public static class OtelAttributes
     /// <summary>
     /// The version / revision of the rule being used for analysis.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1.0.0</description></item>
@@ -7481,6 +7893,8 @@ public static class OtelAttributes
     /// <summary>
     /// The version string of the service API or implementation. The format is not defined by these conventions.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>2.0.0</description></item>
@@ -7492,11 +7906,15 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// A unique id to identify a session.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 00112233-4455-6677-8899-aabbccddeeff</para>
     /// </remarks>
     public const string SESSION_ID = "session.id";
     /// <summary>
     /// The previous `session.id` for this user, when known.
+    /// </summary>
+    /// <remarks>
     /// <para>Example: 00112233-4455-6677-8899-aabbccddeeff</para>
     /// </remarks>
     public const string SESSION_PREVIOUS_ID = "session.previous_id";
@@ -7504,6 +7922,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// SignalR HTTP connection closure status.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>app_shutdown</description></item>
@@ -7513,6 +7933,8 @@ public static class OtelAttributes
     public const string SIGNALR_CONNECTION_STATUS = "signalr.connection.status";
     /// <summary>
     /// [SignalR transport type](https://github.com/dotnet/aspnetcore/blob/main/src/SignalR/docs/specs/TransportProtocols.md)
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>web_sockets</description></item>
@@ -7537,6 +7959,8 @@ public static class OtelAttributes
     public const string SOURCE_ADDRESS = "source.address";
     /// <summary>
     /// Source port number
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>3389</description></item>
@@ -7548,6 +7972,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// Deprecated, use `cpu.logical_number` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1</description></item>
@@ -7557,6 +7983,8 @@ public static class OtelAttributes
     public const string SYSTEM_CPU_LOGICAL_NUMBER = "system.cpu.logical_number";
     /// <summary>
     /// Deprecated, use `cpu.mode` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>idle</description></item>
@@ -7567,6 +7995,8 @@ public static class OtelAttributes
     public const string SYSTEM_CPU_STATE = "system.cpu.state";
     /// <summary>
     /// The device identifier
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>(identifier)</description></item>
@@ -7575,6 +8005,8 @@ public static class OtelAttributes
     public const string SYSTEM_DEVICE = "system.device";
     /// <summary>
     /// The filesystem mode
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>rw, ro</description></item>
@@ -7583,6 +8015,8 @@ public static class OtelAttributes
     public const string SYSTEM_FILESYSTEM_MODE = "system.filesystem.mode";
     /// <summary>
     /// The filesystem mount path
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>/mnt/data</description></item>
@@ -7591,6 +8025,8 @@ public static class OtelAttributes
     public const string SYSTEM_FILESYSTEM_MOUNTPOINT = "system.filesystem.mountpoint";
     /// <summary>
     /// The filesystem state
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>used</description></item>
@@ -7599,6 +8035,8 @@ public static class OtelAttributes
     public const string SYSTEM_FILESYSTEM_STATE = "system.filesystem.state";
     /// <summary>
     /// The filesystem type
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>ext4</description></item>
@@ -7607,6 +8045,8 @@ public static class OtelAttributes
     public const string SYSTEM_FILESYSTEM_TYPE = "system.filesystem.type";
     /// <summary>
     /// The Linux Slab memory state
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>reclaimable</description></item>
@@ -7616,6 +8056,8 @@ public static class OtelAttributes
     public const string SYSTEM_MEMORY_LINUX_SLAB_STATE = "system.memory.linux.slab.state";
     /// <summary>
     /// The memory state
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>free</description></item>
@@ -7625,6 +8067,8 @@ public static class OtelAttributes
     public const string SYSTEM_MEMORY_STATE = "system.memory.state";
     /// <summary>
     /// Deprecated, use `network.connection.state` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>close_wait</description></item>
@@ -7634,6 +8078,8 @@ public static class OtelAttributes
     public const string SYSTEM_NETWORK_STATE = "system.network.state";
     /// <summary>
     /// The paging access direction
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>in</description></item>
@@ -7642,6 +8088,8 @@ public static class OtelAttributes
     public const string SYSTEM_PAGING_DIRECTION = "system.paging.direction";
     /// <summary>
     /// The paging fault type
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>minor</description></item>
@@ -7650,6 +8098,8 @@ public static class OtelAttributes
     public const string SYSTEM_PAGING_FAULT_TYPE = "system.paging.fault.type";
     /// <summary>
     /// The memory paging state
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>free</description></item>
@@ -7658,6 +8108,8 @@ public static class OtelAttributes
     public const string SYSTEM_PAGING_STATE = "system.paging.state";
     /// <summary>
     /// Deprecated, use `system.paging.fault.type` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>minor</description></item>
@@ -7667,6 +8119,8 @@ public static class OtelAttributes
     public const string SYSTEM_PAGING_TYPE = "system.paging.type";
     /// <summary>
     /// Deprecated, use `process.state` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>running</description></item>
@@ -7676,6 +8130,8 @@ public static class OtelAttributes
     public const string SYSTEM_PROCESS_STATUS = "system.process.status";
     /// <summary>
     /// Deprecated, use `process.state` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>running</description></item>
@@ -7700,6 +8156,8 @@ public static class OtelAttributes
     /// <summary>
     /// The version string of the auto instrumentation agent or distribution, if used.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1.2.3</description></item>
@@ -7709,9 +8167,6 @@ public static class OtelAttributes
     /// <summary>
     /// The language of the telemetry SDK.
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string TELEMETRY_SDK_LANGUAGE = "telemetry.sdk.language";
     /// <summary>
@@ -7729,6 +8184,8 @@ public static class OtelAttributes
     /// <summary>
     /// The version string of the telemetry SDK.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1.2.3</description></item>
@@ -7740,6 +8197,8 @@ public static class OtelAttributes
     /// <summary>
     /// The fully qualified human readable name of the [test case](https://wikipedia.org/wiki/Test_case).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>org.example.TestCase1.test1</description></item>
@@ -7751,6 +8210,8 @@ public static class OtelAttributes
     /// <summary>
     /// The status of the actual test case result from test execution.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>pass</description></item>
@@ -7761,6 +8222,8 @@ public static class OtelAttributes
     /// <summary>
     /// The human readable name of a [test suite](https://wikipedia.org/wiki/Test_suite).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>TestSuite1</description></item>
@@ -7770,6 +8233,8 @@ public static class OtelAttributes
     /// <summary>
     /// The status of the test suite run.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>success</description></item>
@@ -7819,6 +8284,8 @@ public static class OtelAttributes
     /// <summary>
     /// PEM-encoded stand-alone certificate offered by the client. This is usually mutually-exclusive of `client.certificate_chain` since this value also exists in that list.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>MII...</description></item>
@@ -7828,6 +8295,8 @@ public static class OtelAttributes
     /// <summary>
     /// Array of PEM-encoded certificates that make up the certificate chain offered by the client. This is usually mutually-exclusive of `client.certificate` since that value should be the first certificate in the chain.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["MII...", "MI..."]</description></item>
@@ -7837,6 +8306,8 @@ public static class OtelAttributes
     /// <summary>
     /// Certificate fingerprint using the MD5 digest of DER-encoded version of certificate offered by the client. For consistency with other hash values, this value should be formatted as an uppercase hash.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0F76C7F2C55BFD7D8E8B8F4BFBF0C9EC</description></item>
@@ -7846,6 +8317,8 @@ public static class OtelAttributes
     /// <summary>
     /// Certificate fingerprint using the SHA1 digest of DER-encoded version of certificate offered by the client. For consistency with other hash values, this value should be formatted as an uppercase hash.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>9E393D93138888D288266C2D915214D1D1CCEB2A</description></item>
@@ -7855,6 +8328,8 @@ public static class OtelAttributes
     /// <summary>
     /// Certificate fingerprint using the SHA256 digest of DER-encoded version of certificate offered by the client. For consistency with other hash values, this value should be formatted as an uppercase hash.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0687F666A054EF17A08E2F2162EAB4CBC0D265E1D7875BE74BF3C712CA92DAF0</description></item>
@@ -7863,6 +8338,8 @@ public static class OtelAttributes
     public const string TLS_CLIENT_HASH_SHA256 = "tls.client.hash.sha256";
     /// <summary>
     /// Distinguished name of [subject](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6) of the issuer of the x.509 certificate presented by the client.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>CN=Example Root CA, OU=Infrastructure Team, DC=example, DC=com</description></item>
@@ -7871,6 +8348,8 @@ public static class OtelAttributes
     public const string TLS_CLIENT_ISSUER = "tls.client.issuer";
     /// <summary>
     /// A hash that identifies clients based on how they perform an SSL/TLS handshake.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>d4e5b18d6b55c71272893221c96ba240</description></item>
@@ -7879,6 +8358,8 @@ public static class OtelAttributes
     public const string TLS_CLIENT_JA3 = "tls.client.ja3";
     /// <summary>
     /// Date/Time indicating when client certificate is no longer considered valid.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>2021-01-01T00:00:00.000Z</description></item>
@@ -7887,6 +8368,8 @@ public static class OtelAttributes
     public const string TLS_CLIENT_NOT_AFTER = "tls.client.not_after";
     /// <summary>
     /// Date/Time indicating when client certificate is first considered valid.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1970-01-01T00:00:00.000Z</description></item>
@@ -7895,6 +8378,8 @@ public static class OtelAttributes
     public const string TLS_CLIENT_NOT_BEFORE = "tls.client.not_before";
     /// <summary>
     /// Deprecated, use `server.address` instead.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>opentelemetry.io</description></item>
@@ -7904,6 +8389,8 @@ public static class OtelAttributes
     public const string TLS_CLIENT_SERVER_NAME = "tls.client.server_name";
     /// <summary>
     /// Distinguished name of subject of the x.509 certificate presented by the client.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>CN=myclient, OU=Documentation Team, DC=example, DC=com</description></item>
@@ -7912,6 +8399,8 @@ public static class OtelAttributes
     public const string TLS_CLIENT_SUBJECT = "tls.client.subject";
     /// <summary>
     /// Array of ciphers offered by the client during the client hello.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384", "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"]</description></item>
@@ -7920,6 +8409,8 @@ public static class OtelAttributes
     public const string TLS_CLIENT_SUPPORTED_CIPHERS = "tls.client.supported_ciphers";
     /// <summary>
     /// String indicating the curve used for the given cipher, when applicable
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>secp256r1</description></item>
@@ -7928,6 +8419,8 @@ public static class OtelAttributes
     public const string TLS_CURVE = "tls.curve";
     /// <summary>
     /// Boolean flag indicating if the TLS negotiation was successful and transitioned to an encrypted tunnel.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>true</description></item>
@@ -7937,6 +8430,8 @@ public static class OtelAttributes
     /// <summary>
     /// String indicating the protocol being tunneled. Per the values in the [IANA registry](https://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xhtml#alpn-protocol-ids), this string should be lower case.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>http/1.1</description></item>
@@ -7946,14 +8441,13 @@ public static class OtelAttributes
     /// <summary>
     /// Normalized lowercase protocol name parsed from original string of the negotiated [SSL/TLS protocol version](https://docs.openssl.org/1.1.1/man3/SSL_get_version/#return-values)
 
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string TLS_PROTOCOL_NAME = "tls.protocol.name";
     /// <summary>
     /// Numeric part of the version parsed from the original string of the negotiated [SSL/TLS protocol version](https://docs.openssl.org/1.1.1/man3/SSL_get_version/#return-values)
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1.2</description></item>
@@ -7963,6 +8457,8 @@ public static class OtelAttributes
     public const string TLS_PROTOCOL_VERSION = "tls.protocol.version";
     /// <summary>
     /// Boolean flag indicating if this TLS connection was resumed from an existing TLS negotiation.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>true</description></item>
@@ -7972,6 +8468,8 @@ public static class OtelAttributes
     /// <summary>
     /// PEM-encoded stand-alone certificate offered by the server. This is usually mutually-exclusive of `server.certificate_chain` since this value also exists in that list.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>MII...</description></item>
@@ -7981,6 +8479,8 @@ public static class OtelAttributes
     /// <summary>
     /// Array of PEM-encoded certificates that make up the certificate chain offered by the server. This is usually mutually-exclusive of `server.certificate` since that value should be the first certificate in the chain.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["MII...", "MI..."]</description></item>
@@ -7990,6 +8490,8 @@ public static class OtelAttributes
     /// <summary>
     /// Certificate fingerprint using the MD5 digest of DER-encoded version of certificate offered by the server. For consistency with other hash values, this value should be formatted as an uppercase hash.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0F76C7F2C55BFD7D8E8B8F4BFBF0C9EC</description></item>
@@ -7999,6 +8501,8 @@ public static class OtelAttributes
     /// <summary>
     /// Certificate fingerprint using the SHA1 digest of DER-encoded version of certificate offered by the server. For consistency with other hash values, this value should be formatted as an uppercase hash.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>9E393D93138888D288266C2D915214D1D1CCEB2A</description></item>
@@ -8008,6 +8512,8 @@ public static class OtelAttributes
     /// <summary>
     /// Certificate fingerprint using the SHA256 digest of DER-encoded version of certificate offered by the server. For consistency with other hash values, this value should be formatted as an uppercase hash.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>0687F666A054EF17A08E2F2162EAB4CBC0D265E1D7875BE74BF3C712CA92DAF0</description></item>
@@ -8016,6 +8522,8 @@ public static class OtelAttributes
     public const string TLS_SERVER_HASH_SHA256 = "tls.server.hash.sha256";
     /// <summary>
     /// Distinguished name of [subject](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6) of the issuer of the x.509 certificate presented by the client.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>CN=Example Root CA, OU=Infrastructure Team, DC=example, DC=com</description></item>
@@ -8024,6 +8532,8 @@ public static class OtelAttributes
     public const string TLS_SERVER_ISSUER = "tls.server.issuer";
     /// <summary>
     /// A hash that identifies servers based on how they perform an SSL/TLS handshake.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>d4e5b18d6b55c71272893221c96ba240</description></item>
@@ -8032,6 +8542,8 @@ public static class OtelAttributes
     public const string TLS_SERVER_JA3S = "tls.server.ja3s";
     /// <summary>
     /// Date/Time indicating when server certificate is no longer considered valid.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>2021-01-01T00:00:00.000Z</description></item>
@@ -8040,6 +8552,8 @@ public static class OtelAttributes
     public const string TLS_SERVER_NOT_AFTER = "tls.server.not_after";
     /// <summary>
     /// Date/Time indicating when server certificate is first considered valid.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>1970-01-01T00:00:00.000Z</description></item>
@@ -8048,6 +8562,8 @@ public static class OtelAttributes
     public const string TLS_SERVER_NOT_BEFORE = "tls.server.not_before";
     /// <summary>
     /// Distinguished name of subject of the x.509 certificate presented by the server.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>CN=myserver, OU=Documentation Team, DC=example, DC=com</description></item>
@@ -8087,6 +8603,8 @@ public static class OtelAttributes
     /// <summary>
     /// The [URI fragment](https://www.rfc-editor.org/rfc/rfc3986#section-3.5) component
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>SemConv</description></item>
@@ -8133,6 +8651,8 @@ public static class OtelAttributes
     /// <summary>
     /// Port extracted from the `url.full`
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>443</description></item>
@@ -8167,6 +8687,8 @@ public static class OtelAttributes
     /// <summary>
     /// The [URI scheme](https://www.rfc-editor.org/rfc/rfc3986#section-3.1) component identifying the used protocol.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>https</description></item>
@@ -8191,6 +8713,8 @@ public static class OtelAttributes
     /// <summary>
     /// The low-cardinality template of an [absolute path reference](https://www.rfc-editor.org/rfc/rfc3986#section-4.2).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>/users/{id}</description></item>
@@ -8217,6 +8741,8 @@ public static class OtelAttributes
     /// <summary>
     /// User email address.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>a.einstein@example.com</description></item>
@@ -8226,6 +8752,8 @@ public static class OtelAttributes
     /// <summary>
     /// User's full name
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Albert Einstein</description></item>
@@ -8247,6 +8775,8 @@ public static class OtelAttributes
     /// <summary>
     /// Unique identifier of the user.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>S-1-5-21-202424912787-2692429404-2351956786-1000</description></item>
@@ -8256,6 +8786,8 @@ public static class OtelAttributes
     /// <summary>
     /// Short name or login/username of the user.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>a.einstein</description></item>
@@ -8265,6 +8797,8 @@ public static class OtelAttributes
     /// <summary>
     /// Array of user roles at the time of the event.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>["admin", "reporting_user"]</description></item>
@@ -8289,6 +8823,8 @@ public static class OtelAttributes
     /// <summary>
     /// Value of the [HTTP User-Agent](https://www.rfc-editor.org/rfc/rfc9110.html#field.user-agent) header sent by the client.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>CERN-LineMode/2.15 libwww/2.17b3</description></item>
@@ -8351,9 +8887,6 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// The type of garbage collection.
-    /// <para>Examples:</para>
-    /// <list type="bullet">
-    /// </list>
     /// </summary>
     public const string V8JS_GC_TYPE = "v8js.gc.type";
     /// <summary>
@@ -8371,6 +8904,8 @@ public static class OtelAttributes
     /// <summary>
     /// The ID of the change (pull request/merge request/changelist) if applicable. This is usually a unique (within repository) identifier generated by the VCS system.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>123</description></item>
@@ -8380,6 +8915,8 @@ public static class OtelAttributes
     /// <summary>
     /// The state of the change (pull request/merge request/changelist).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>open</description></item>
@@ -8391,6 +8928,8 @@ public static class OtelAttributes
     /// <summary>
     /// The human readable title of the change (pull request/merge request/changelist). This title is often a brief summary of the change and may get merged in to a ref as the commit summary.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Fixes broken thing</description></item>
@@ -8402,6 +8941,8 @@ public static class OtelAttributes
     /// <summary>
     /// The type of line change being measured on a branch or change.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>added</description></item>
@@ -8412,6 +8953,8 @@ public static class OtelAttributes
     /// <summary>
     /// The group owner within the version control system.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>my-org</description></item>
@@ -8423,6 +8966,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the version control system provider.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>github</description></item>
@@ -8517,6 +9062,8 @@ public static class OtelAttributes
     /// <summary>
     /// The type of the [reference](https://git-scm.com/docs/gitglossary#def_ref) in the repository.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>branch</description></item>
@@ -8527,6 +9074,8 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `vcs.change.id` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>123</description></item>
@@ -8537,6 +9086,8 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `vcs.change.title` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>Fixes broken thing</description></item>
@@ -8562,6 +9113,8 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `vcs.ref.head.name` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>my-feature-branch</description></item>
@@ -8573,6 +9126,8 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `vcs.ref.head.revision` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>9d59409acf479dfa0df1aa568182e43e43df8bbe28d60fcf2bc52e30068802cc</description></item>
@@ -8586,6 +9141,8 @@ public static class OtelAttributes
     /// <summary>
     /// Deprecated, use `vcs.ref.head.type` instead.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>branch</description></item>
@@ -8610,6 +9167,8 @@ public static class OtelAttributes
     /// <summary>
     /// The type of revision comparison.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>ahead</description></item>
@@ -8622,6 +9181,8 @@ public static class OtelAttributes
     /// <summary>
     /// Additional description of the web engine (e.g. detailed version and edition information).
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>WildFly Full 21.0.0.Final (WildFly Core 13.0.1.Final) - 2.2.2.Final</description></item>
@@ -8631,6 +9192,8 @@ public static class OtelAttributes
     /// <summary>
     /// The name of the web engine.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>WildFly</description></item>
@@ -8640,6 +9203,8 @@ public static class OtelAttributes
     /// <summary>
     /// The version of the web engine.
 
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>21.0.0</description></item>
@@ -8650,6 +9215,8 @@ public static class OtelAttributes
     #region  Attributes
     /// <summary>
     /// The System Management Facility (SMF) Identifier uniquely identified a z/OS system within a SYSPLEX or mainframe environment and is used for system and performance analysis.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>SYS1</description></item>
@@ -8658,6 +9225,8 @@ public static class OtelAttributes
     public const string ZOS_SMF_ID = "zos.smf.id";
     /// <summary>
     /// The name of the SYSPLEX to which the z/OS system belongs too.
+    /// </summary>
+    /// <remarks>
     /// <para>Examples:</para>
     /// <list type="bullet">
     /// <item><description>SYSPLEX1</description></item>

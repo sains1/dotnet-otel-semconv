@@ -11,4 +11,9 @@
         <ProjectReference Include="..\ServiceDefaults\ServiceDefaults.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <!-- Include semantic conventions metadata for analyzer -->
+        <AdditionalFiles Include="otel-attributes-metadata.json" />
+    </ItemGroup>
+
 </Project>

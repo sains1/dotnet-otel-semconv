@@ -1,0 +1,23 @@
+{%- set file_name = "otel-attributes-metadata.json" -%}
+{%- do template.set_file_name(file_name) -%}
+{% autoescape false %}{
+  "version": "{{ params.schema_url }}",
+  "attributes": [
+{%- set comma = joiner(",") %}
+{%- for root_ns in ctx %}
+{%- if root_ns.id not in params.excluded_namespaces %}
+{%- for attribute in root_ns.attributes -%}
+{{ comma() }}
+    {
+      "attributeName": "{{ attribute.name }}",
+      "constantName": "{{ attribute.name | replace(".", "_") | replace("-", "_") | upper }}",
+      "type": "{% if attribute.type is mapping %}string{% else %}{{ attribute.type }}{% endif %}",
+      "stability": "{{ attribute.stability if attribute.stability else "stable" }}",
+      "brief": "{{ attribute.brief | replace("\\", "\\\\") | replace("\n", " ") | replace('"', '\\"') }}",
+      "deprecated": {% if attribute.deprecated %}"{{ attribute.deprecated | replace("\\", "\\\\") | replace("\n", " ") | replace('"', '\\"') }}"{% else %}null{% endif %}
+    }
+{%- endfor %}
+{%- endif %}
+{%- endfor %}
+  ]
+}{% endautoescape %}
